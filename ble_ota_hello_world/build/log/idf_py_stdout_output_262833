@@ -1,0 +1,2344 @@
+Command: /home/dennis0405/.espressif/python_env/idf6.0_py3.10_env/bin/python /home/dennis0405/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/dennis0405/ble_ota_hello_world/build/ble_ota_hello_world.elf /home/dennis0405/ble_ota_hello_world/build/bootloader/bootloader.elf -m '/home/dennis0405/.espressif/python_env/idf6.0_py3.10_env/bin/python' '/home/dennis0405/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xb (SPI_FAST_FLASH_BOOT)
+Saved PC:0x420318d7
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1598
+load:0x403c8700,len:0xd20
+load:0x403cb700,len:0x2f9c
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v6.0-dev-940-g76cec451ce 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Jul  9 2025 14:02:32[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (26) boot: chip revision: v0.2[0m
+[0;32mI (29) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (71) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (77) boot:  3 ota_0            OTA app          00 10 00020000 007f0000[0m
+[0;32mI (84) boot:  4 ota_1            OTA app          00 11 00810000 007f0000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (94) esp_image: segment 0: paddr=00020020 vaddr=3c060020 size=15bcch ( 89036) map[0m
+[0;32mI (117) esp_image: segment 1: paddr=00035bf4 vaddr=3fc9a700 size=041d4h ( 16852) load[0m
+[0;32mI (120) esp_image: segment 2: paddr=00039dd0 vaddr=40374000 size=06248h ( 25160) load[0m
+[0;32mI (126) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=54374h (344948) map[0m
+[0;32mI (189) esp_image: segment 4: paddr=0009439c vaddr=4037a248 size=10458h ( 66648) load[0m
+[0;32mI (204) esp_image: segment 5: paddr=000a47fc vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (213) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (213) boot: Disabling RNG early entropy source...[0m
+[0;32mI (223) cpu_start: Multicore app[0m
+[0;32mI (233) cpu_start: Pro cpu start user code[0m
+[0;32mI (233) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (233) app_init: Application information:[0m
+[0;32mI (233) app_init: Project name:     ble_ota_hello_world[0m
+[0;32mI (238) app_init: App version:      1[0m
+[0;32mI (241) app_init: Compile time:     Jul  9 2025 14:02:16[0m
+[0;32mI (246) app_init: ELF file SHA256:  c28f9f399...[0m
+[0;32mI (251) app_init: ESP-IDF:          v6.0-dev-940-g76cec451ce[0m
+[0;32mI (256) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (260) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (264) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (268) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (274) heap_init: At 3FCA0DF8 len 00048918 (290 KiB): RAM[0m
+[0;32mI (279) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (284) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (290) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (296) spi_flash: detected chip: gd[0m
+[0;32mI (298) spi_flash: flash io: dio[0m
+[0;32mI (301) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (308) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (314) coexist: coex firmware version: 831ec70[0m
+[0;32mI (318) coexist: coexist rom version e7ae62f[0m
+[0;32mI (323) main_task: Started on CPU0[0m
+[0;32mI (333) main_task: Calling app_main()[0m
+[0;32mI (333) APP_MAIN: Initializing nvs flash[0m
+[0;32mI (343) APP_MAIN: Initializing BLE OTA and Hello World task[0m
+[0;32mI (343) BLE_INIT: BT controller compile version [4713a69][0m
+[0;32mI (343) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (353) BLE_INIT: Bluetooth MAC: 24:58:7c:de:8c:9e[0m
+[0;32mI (353) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (393) NimBLE_BLE_OTA: BLE Host Task Started[0m
+[0;32mI (403) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (403) NimBLE_BLE_OTA: Device Address: [0m
+[0;32mI (403) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (403) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (413) NimBLE: disc_mode=2[0m
+[0;32mI (413) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (423) NimBLE: [0m
+
+[0;32mI (423) HELLO WORLD: Hello World![0m
+[0;32mI (423) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (433) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (433) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (443) HELLO WORLD: Minimum free heap size: 258780 bytes[0m
+
+[0;32mI (443) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (453) APP_MAIN: System initialization complete[0m
+[0;32mI (1453) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (2453) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (3453) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (4453) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (5453) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (6453) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (7453) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (8453) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (9453) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (10453) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (11453) HELLO WORLD: Restarting now.[0m
+[0;32mI (11453) HELLO WORLD: Hello World![0m
+[0;32mI (11453) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (11453) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (11453) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (11463) HELLO WORLD: Minimum free heap size: 258780 bytes[0m
+
+[0;32mI (11463) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (12473) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (13473) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (14473) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (15473) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (16473) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (17473) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (18473) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (18813) NimBLE_BLE_OTA: connection established; status=0 [0m
+[0;32mI (18813) NimBLE_BLE_OTA: handle=1 our_ota_addr_type=0 our_ota_addr=[0m
+[0;32mI (18823) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (18823) NimBLE_BLE_OTA:  our_id_addr_type=0 our_id_addr=[0m
+[0;32mI (18823) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (18833) NimBLE_BLE_OTA:  peer_ota_addr_type=1 peer_ota_addr=[0m
+[0;32mI (18833) NimBLE_BLE_OTA: 57:b9:80:fe:24:69[0m
+[0;32mI (18843) NimBLE_BLE_OTA:  peer_id_addr_type=1 peer_id_addr=[0m
+[0;32mI (18843) NimBLE_BLE_OTA: 57:b9:80:fe:24:69[0m
+[0;32mI (18853) NimBLE_BLE_OTA:  conn_itvl=21 conn_latency=0 supervision_timeout=72 encrypted=0 authenticated=0 bonded=0[0m
+
+[0;32mI (19083) NimBLE_BLE_OTA: mtu update event; conn_handle=1 cid=4 mtu=517[0m
+
+[0;32mI (19293) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 4[0m
+[0;32mI (19293) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=8 reason=1 prevn=0 curn=0 previ=0 curi=1[0m
+
+[0;32mI (19473) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (19503) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 0[0m
+[0;32mI (19503) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=16 reason=1 prevn=0 curn=0 previ=0 curi=1[0m
+
+[0;32mI (19603) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 1[0m
+[0;32mI (19603) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=19 reason=1 prevn=0 curn=0 previ=0 curi=1[0m
+
+[0;32mI (19713) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 2[0m
+[0;32mI (19713) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=22 reason=1 prevn=0 curn=0 previ=0 curi=1[0m
+
+[0;32mI (19763) NimBLE_BLE_OTA: recv ota start cmd, fw_length = 566272[0m
+[0;32mI (19763) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (19763) NimBLE: att_handle=22[0m
+
+[0;32mI (20313) OTA_HELPER: ota_task start[0m
+[0;32mI (20313) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (20313) NimBLE: att_handle=16[0m
+
+[0;32mI (20593) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (21623) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (21653) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (21653) NimBLE: att_handle=16[0m
+
+[0;32mI (22643) HELLO WORLD: Restarting now.[0m
+[0;32mI (22643) HELLO WORLD: Hello World![0m
+[0;32mI (22643) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (22643) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (22643) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (22673) HELLO WORLD: Minimum free heap size: 245816 bytes[0m
+
+[0;32mI (22673) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (23673) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (24693) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (25113) OTA_HELPER: wait for data from ringbuf! fw_len = 566272[0m
+[0;32mI (25113) OTA_HELPER: recv: 8192, recv_total:8192[0m
+
+[0;32mI (25143) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (25143) NimBLE: att_handle=16[0m
+
+[0;32mI (25143) OTA_HELPER: recv: 4096, recv_total:12288[0m
+
+[0;32mI (25693) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (25693) OTA_HELPER: recv: 4096, recv_total:16384[0m
+
+[0;32mI (25693) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (25703) NimBLE: att_handle=16[0m
+
+[0;32mI (26243) OTA_HELPER: recv: 4096, recv_total:20480[0m
+
+[0;32mI (26243) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (26253) NimBLE: att_handle=16[0m
+
+[0;32mI (26693) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (26793) OTA_HELPER: recv: 4096, recv_total:24576[0m
+
+[0;32mI (26793) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (26813) NimBLE: att_handle=16[0m
+
+[0;32mI (27423) OTA_HELPER: recv: 4096, recv_total:28672[0m
+
+[0;32mI (27423) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (27443) NimBLE: att_handle=16[0m
+
+[0;32mI (27693) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (28083) OTA_HELPER: recv: 4096, recv_total:32768[0m
+
+[0;32mI (28083) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (28093) NimBLE: att_handle=16[0m
+
+[0;32mI (28663) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (28663) OTA_HELPER: recv: 4096, recv_total:36864[0m
+
+[0;32mI (28663) NimBLE: att_handle=16[0m
+
+[0;32mI (28693) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (29293) OTA_HELPER: recv: 4096, recv_total:40960[0m
+
+[0;32mI (29293) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (29303) NimBLE: att_handle=16[0m
+
+[0;32mI (29693) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (29923) OTA_HELPER: recv: 4096, recv_total:45056[0m
+
+[0;32mI (29923) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (29933) NimBLE: att_handle=16[0m
+
+[0;32mI (30523) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (30523) OTA_HELPER: recv: 4096, recv_total:49152[0m
+
+[0;32mI (30523) NimBLE: att_handle=16[0m
+
+[0;32mI (30693) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (31153) OTA_HELPER: recv: 4096, recv_total:53248[0m
+
+[0;32mI (31153) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (31163) NimBLE: att_handle=16[0m
+
+[0;32mI (31693) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (31733) OTA_HELPER: recv: 4096, recv_total:57344[0m
+
+[0;32mI (31733) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (31743) NimBLE: att_handle=16[0m
+
+[0;32mI (32283) OTA_HELPER: recv: 4096, recv_total:61440[0m
+
+[0;32mI (32283) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (32293) NimBLE: att_handle=16[0m
+
+[0;32mI (32693) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (32863) OTA_HELPER: recv: 4096, recv_total:65536[0m
+
+[0;32mI (32863) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (32873) NimBLE: att_handle=16[0m
+
+[0;32mI (33463) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (33463) OTA_HELPER: recv: 4096, recv_total:69632[0m
+
+[0;32mI (33463) NimBLE: att_handle=16[0m
+
+[0;32mI (33693) HELLO WORLD: Restarting now.[0m
+[0;32mI (33693) HELLO WORLD: Hello World![0m
+[0;32mI (33693) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (33693) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (33693) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (33703) HELLO WORLD: Minimum free heap size: 245784 bytes[0m
+
+[0;32mI (33703) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (33933) OTA_HELPER: recv: 4096, recv_total:73728[0m
+
+[0;32mI (33933) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (33943) NimBLE: att_handle=16[0m
+
+[0;32mI (34543) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (34543) OTA_HELPER: recv: 4096, recv_total:77824[0m
+
+[0;32mI (34543) NimBLE: att_handle=16[0m
+
+[0;32mI (34713) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (35143) OTA_HELPER: recv: 4096, recv_total:81920[0m
+
+[0;32mI (35143) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (35153) NimBLE: att_handle=16[0m
+
+[0;32mI (35673) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (35673) OTA_HELPER: recv: 4096, recv_total:86016[0m
+
+[0;32mI (35673) NimBLE: att_handle=16[0m
+
+[0;32mI (35713) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (36243) OTA_HELPER: recv: 4096, recv_total:90112[0m
+
+[0;32mI (36253) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (36253) NimBLE: att_handle=16[0m
+
+[0;32mI (36713) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (36873) OTA_HELPER: recv: 4096, recv_total:94208[0m
+
+[0;32mI (36883) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (36893) NimBLE: att_handle=16[0m
+
+[0;32mI (37483) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (37483) OTA_HELPER: recv: 4096, recv_total:98304[0m
+
+[0;32mI (37483) NimBLE: att_handle=16[0m
+
+[0;32mI (37713) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (38003) OTA_HELPER: recv: 4096, recv_total:102400[0m
+
+[0;32mI (38003) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (38013) NimBLE: att_handle=16[0m
+
+[0;32mI (38613) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (38613) OTA_HELPER: recv: 4096, recv_total:106496[0m
+
+[0;32mI (38613) NimBLE: att_handle=16[0m
+
+[0;32mI (38713) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (39193) OTA_HELPER: recv: 4096, recv_total:110592[0m
+
+[0;32mI (39193) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (39193) NimBLE: att_handle=16[0m
+
+[0;32mI (39713) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (39793) OTA_HELPER: recv: 4096, recv_total:114688[0m
+
+[0;32mI (39793) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (39803) NimBLE: att_handle=16[0m
+
+[0;32mI (40713) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (40713) OTA_HELPER: recv: 4096, recv_total:118784[0m
+
+[0;32mI (40713) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (40723) NimBLE: att_handle=16[0m
+
+[0;32mI (41553) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (41553) OTA_HELPER: recv: 4096, recv_total:122880[0m
+
+[0;32mI (41553) NimBLE: att_handle=16[0m
+
+[0;32mI (41713) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (42153) OTA_HELPER: recv: 4096, recv_total:126976[0m
+
+[0;32mI (42153) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (42163) NimBLE: att_handle=16[0m
+
+[0;32mI (42713) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (42733) OTA_HELPER: recv: 4096, recv_total:131072[0m
+
+[0;32mI (42733) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (42743) NimBLE: att_handle=16[0m
+
+[0;32mI (43333) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (43333) OTA_HELPER: recv: 4096, recv_total:135168[0m
+
+[0;32mI (43333) NimBLE: att_handle=16[0m
+
+[0;32mI (43713) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (43863) OTA_HELPER: recv: 4096, recv_total:139264[0m
+
+[0;32mI (43863) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (43873) NimBLE: att_handle=16[0m
+
+[0;32mI (44413) OTA_HELPER: recv: 4096, recv_total:143360[0m
+
+[0;32mI (44413) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (44423) NimBLE: att_handle=16[0m
+
+[0;32mI (44713) HELLO WORLD: Restarting now.[0m
+[0;32mI (44713) HELLO WORLD: Hello World![0m
+[0;32mI (44713) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (44713) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (44713) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (44723) HELLO WORLD: Minimum free heap size: 245784 bytes[0m
+
+[0;32mI (44723) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (44933) OTA_HELPER: recv: 4096, recv_total:147456[0m
+
+[0;32mI (44933) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (44943) NimBLE: att_handle=16[0m
+
+[0;32mI (45543) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (45543) OTA_HELPER: recv: 4096, recv_total:151552[0m
+
+[0;32mI (45543) NimBLE: att_handle=16[0m
+
+[0;32mI (45733) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (46123) OTA_HELPER: recv: 4096, recv_total:155648[0m
+
+[0;32mI (46123) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (46133) NimBLE: att_handle=16[0m
+
+[0;32mI (46693) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (46693) OTA_HELPER: recv: 4096, recv_total:159744[0m
+
+[0;32mI (46693) NimBLE: att_handle=16[0m
+
+[0;32mI (46733) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (47243) OTA_HELPER: recv: 4096, recv_total:163840[0m
+
+[0;32mI (47243) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (47253) NimBLE: att_handle=16[0m
+
+[0;32mI (47733) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (47743) OTA_HELPER: recv: 4096, recv_total:167936[0m
+
+[0;32mI (47743) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (47753) NimBLE: att_handle=16[0m
+
+[0;32mI (48323) OTA_HELPER: recv: 4096, recv_total:172032[0m
+
+[0;32mI (48323) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (48333) NimBLE: att_handle=16[0m
+
+[0;32mI (48733) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (48923) OTA_HELPER: recv: 4096, recv_total:176128[0m
+
+[0;32mI (48923) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (48933) NimBLE: att_handle=16[0m
+
+[0;32mI (49553) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (49553) OTA_HELPER: recv: 4096, recv_total:180224[0m
+
+[0;32mI (49553) NimBLE: att_handle=16[0m
+
+[0;32mI (49733) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (50133) OTA_HELPER: recv: 4096, recv_total:184320[0m
+
+[0;32mI (50133) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (50143) NimBLE: att_handle=16[0m
+
+[0;32mI (50683) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (50683) OTA_HELPER: recv: 4096, recv_total:188416[0m
+
+[0;32mI (50683) NimBLE: att_handle=16[0m
+
+[0;32mI (50733) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (51213) OTA_HELPER: recv: 4096, recv_total:192512[0m
+
+[0;32mI (51213) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (51223) NimBLE: att_handle=16[0m
+
+[0;32mI (51733) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (51793) OTA_HELPER: recv: 4096, recv_total:196608[0m
+
+[0;32mI (51793) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (51803) NimBLE: att_handle=16[0m
+
+[0;32mI (52363) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (52363) OTA_HELPER: recv: 4096, recv_total:200704[0m
+
+[0;32mI (52363) NimBLE: att_handle=16[0m
+
+[0;32mI (52733) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (52943) OTA_HELPER: recv: 4096, recv_total:204800[0m
+
+[0;32mI (52943) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (52953) NimBLE: att_handle=16[0m
+
+[0;32mI (53523) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53523) OTA_HELPER: recv: 4096, recv_total:208896[0m
+
+[0;32mI (53523) NimBLE: att_handle=16[0m
+
+[0;32mI (53733) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (54103) OTA_HELPER: recv: 4096, recv_total:212992[0m
+
+[0;32mI (54103) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (54113) NimBLE: att_handle=16[0m
+
+[0;32mI (54653) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (54653) OTA_HELPER: recv: 4096, recv_total:217088[0m
+
+[0;32mI (54653) NimBLE: att_handle=16[0m
+
+[0;32mI (54733) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (55223) OTA_HELPER: recv: 4096, recv_total:221184[0m
+
+[0;32mI (55223) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (55243) NimBLE: att_handle=16[0m
+
+[0;32mI (55733) HELLO WORLD: Restarting now.[0m
+[0;32mI (55733) HELLO WORLD: Hello World![0m
+[0;32mI (55733) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (55733) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (55733) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (55743) HELLO WORLD: Minimum free heap size: 245784 bytes[0m
+
+[0;32mI (55743) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (55783) OTA_HELPER: recv: 4096, recv_total:225280[0m
+
+[0;32mI (55783) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (55793) NimBLE: att_handle=16[0m
+
+[0;32mI (56303) OTA_HELPER: recv: 4096, recv_total:229376[0m
+
+[0;32mI (56303) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (56313) NimBLE: att_handle=16[0m
+
+[0;32mI (56753) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (56883) OTA_HELPER: recv: 4096, recv_total:233472[0m
+
+[0;32mI (56883) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (56893) NimBLE: att_handle=16[0m
+
+[0;32mI (57463) OTA_HELPER: recv: 4096, recv_total:237568[0m
+
+[0;32mI (57463) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (57473) NimBLE: att_handle=16[0m
+
+[0;32mI (57753) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (57983) OTA_HELPER: recv: 4096, recv_total:241664[0m
+
+[0;32mI (57983) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (57993) NimBLE: att_handle=16[0m
+
+[0;32mI (58533) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (58533) OTA_HELPER: recv: 4096, recv_total:245760[0m
+
+[0;32mI (58533) NimBLE: att_handle=16[0m
+
+[0;32mI (58753) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (59163) OTA_HELPER: recv: 4096, recv_total:249856[0m
+
+[0;32mI (59163) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (59173) NimBLE: att_handle=16[0m
+
+[0;32mI (59713) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (59713) OTA_HELPER: recv: 4096, recv_total:253952[0m
+
+[0;32mI (59713) NimBLE: att_handle=16[0m
+
+[0;32mI (59753) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (60263) OTA_HELPER: recv: 4096, recv_total:258048[0m
+
+[0;32mI (60273) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60273) NimBLE: att_handle=16[0m
+
+[0;32mI (60753) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (60763) OTA_HELPER: recv: 4096, recv_total:262144[0m
+
+[0;32mI (60763) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60773) NimBLE: att_handle=16[0m
+
+[0;32mI (61293) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (61293) OTA_HELPER: recv: 4096, recv_total:266240[0m
+
+[0;32mI (61293) NimBLE: att_handle=16[0m
+
+[0;32mI (61753) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (61893) OTA_HELPER: recv: 4096, recv_total:270336[0m
+
+[0;32mI (61893) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (61903) NimBLE: att_handle=16[0m
+
+[0;32mI (62503) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (62503) OTA_HELPER: recv: 4096, recv_total:274432[0m
+
+[0;32mI (62503) NimBLE: att_handle=16[0m
+
+[0;32mI (62753) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (63233) OTA_HELPER: recv: 4096, recv_total:278528[0m
+
+[0;32mI (63233) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (63243) NimBLE: att_handle=16[0m
+
+[0;32mI (63753) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (63973) OTA_HELPER: recv: 4096, recv_total:282624[0m
+
+[0;32mI (63973) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (63983) NimBLE: att_handle=16[0m
+
+[0;32mI (64653) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64653) OTA_HELPER: recv: 4096, recv_total:286720[0m
+
+[0;32mI (64653) NimBLE: att_handle=16[0m
+
+[0;32mI (64753) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (65253) OTA_HELPER: recv: 4096, recv_total:290816[0m
+
+[0;32mI (65253) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (65263) NimBLE: att_handle=16[0m
+
+[0;32mI (65753) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (65883) OTA_HELPER: recv: 4096, recv_total:294912[0m
+
+[0;32mI (65883) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (65893) NimBLE: att_handle=16[0m
+
+[0;32mI (66433) OTA_HELPER: recv: 4096, recv_total:299008[0m
+
+[0;32mI (66433) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66443) NimBLE: att_handle=16[0m
+
+[0;32mI (66753) HELLO WORLD: Restarting now.[0m
+[0;32mI (66753) HELLO WORLD: Hello World![0m
+[0;32mI (66753) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (66753) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (66753) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (66763) HELLO WORLD: Minimum free heap size: 245784 bytes[0m
+
+[0;32mI (66763) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (67063) OTA_HELPER: recv: 4096, recv_total:303104[0m
+
+[0;32mI (67063) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (67073) NimBLE: att_handle=16[0m
+
+[0;32mI (67643) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (67643) OTA_HELPER: recv: 4096, recv_total:307200[0m
+
+[0;32mI (67643) NimBLE: att_handle=16[0m
+
+[0;32mI (67773) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (68253) OTA_HELPER: recv: 4096, recv_total:311296[0m
+
+[0;32mI (68253) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (68263) NimBLE: att_handle=16[0m
+
+[0;32mI (68773) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (68803) OTA_HELPER: recv: 4096, recv_total:315392[0m
+
+[0;32mI (68803) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (68813) NimBLE: att_handle=16[0m
+
+[0;32mI (69433) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (69433) OTA_HELPER: recv: 4096, recv_total:319488[0m
+
+[0;32mI (69433) NimBLE: att_handle=16[0m
+
+[0;32mI (69773) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (70063) OTA_HELPER: recv: 4096, recv_total:323584[0m
+
+[0;32mI (70063) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (70073) NimBLE: att_handle=16[0m
+
+[0;32mI (70583) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (70583) OTA_HELPER: recv: 4096, recv_total:327680[0m
+
+[0;32mI (70583) NimBLE: att_handle=16[0m
+
+[0;32mI (70773) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (71163) OTA_HELPER: recv: 4096, recv_total:331776[0m
+
+[0;32mI (71163) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (71173) NimBLE: att_handle=16[0m
+
+[0;32mI (71713) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (71713) OTA_HELPER: recv: 4096, recv_total:335872[0m
+
+[0;32mI (71713) NimBLE: att_handle=16[0m
+
+[0;32mI (71773) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (72343) OTA_HELPER: recv: 4096, recv_total:339968[0m
+
+[0;32mI (72343) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (72353) NimBLE: att_handle=16[0m
+
+[0;32mI (72773) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (72943) OTA_HELPER: recv: 4096, recv_total:344064[0m
+
+[0;32mI (72943) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (72953) NimBLE: att_handle=16[0m
+
+[0;32mI (73523) OTA_HELPER: recv: 4096, recv_total:348160[0m
+
+[0;32mI (73523) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73533) NimBLE: att_handle=16[0m
+
+[0;32mI (73773) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (74073) OTA_HELPER: recv: 4096, recv_total:352256[0m
+
+[0;32mI (74073) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (74083) NimBLE: att_handle=16[0m
+
+[0;32mI (74703) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (74703) OTA_HELPER: recv: 4096, recv_total:356352[0m
+
+[0;32mI (74703) NimBLE: att_handle=16[0m
+
+[0;32mI (74773) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (75333) OTA_HELPER: recv: 4096, recv_total:360448[0m
+
+[0;32mI (75333) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75343) NimBLE: att_handle=16[0m
+
+[0;32mI (75773) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (75963) OTA_HELPER: recv: 4096, recv_total:364544[0m
+
+[0;32mI (75963) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75973) NimBLE: att_handle=16[0m
+
+[0;32mI (76543) OTA_HELPER: recv: 4096, recv_total:368640[0m
+
+[0;32mI (76543) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (76553) NimBLE: att_handle=16[0m
+
+[0;32mI (76773) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (77143) OTA_HELPER: recv: 4096, recv_total:372736[0m
+
+[0;32mI (77143) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77153) NimBLE: att_handle=16[0m
+
+[0;32mI (77773) HELLO WORLD: Restarting now.[0m
+[0;32mI (77773) HELLO WORLD: Hello World![0m
+[0;32mI (77773) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (77773) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (77773) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (77783) HELLO WORLD: Minimum free heap size: 245784 bytes[0m
+
+[0;32mI (77783) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (77803) OTA_HELPER: recv: 4096, recv_total:376832[0m
+
+[0;32mI (77803) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77813) NimBLE: att_handle=16[0m
+
+[0;32mI (78403) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (78403) OTA_HELPER: recv: 4096, recv_total:380928[0m
+
+[0;32mI (78413) NimBLE: att_handle=16[0m
+
+[0;32mI (78793) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (78933) OTA_HELPER: recv: 4096, recv_total:385024[0m
+
+[0;32mI (78933) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (78943) NimBLE: att_handle=16[0m
+
+[0;32mI (79513) OTA_HELPER: recv: 4096, recv_total:389120[0m
+
+[0;32mI (79513) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (79523) NimBLE: att_handle=16[0m
+
+[0;32mI (79793) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (80143) OTA_HELPER: recv: 4096, recv_total:393216[0m
+
+[0;32mI (80143) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (80153) NimBLE: att_handle=16[0m
+
+[0;32mI (80713) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (80713) OTA_HELPER: recv: 4096, recv_total:397312[0m
+
+[0;32mI (80723) NimBLE: att_handle=16[0m
+
+[0;32mI (80793) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (81273) OTA_HELPER: recv: 4096, recv_total:401408[0m
+
+[0;32mI (81273) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (81283) NimBLE: att_handle=16[0m
+
+[0;32mI (81793) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (81873) OTA_HELPER: recv: 4096, recv_total:405504[0m
+
+[0;32mI (81873) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (81883) NimBLE: att_handle=16[0m
+
+[0;32mI (82453) OTA_HELPER: recv: 4096, recv_total:409600[0m
+
+[0;32mI (82453) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (82463) NimBLE: att_handle=16[0m
+
+[0;32mI (82793) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (83053) OTA_HELPER: recv: 4096, recv_total:413696[0m
+
+[0;32mI (83053) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (83063) NimBLE: att_handle=16[0m
+
+[0;32mI (83683) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (83683) OTA_HELPER: recv: 4096, recv_total:417792[0m
+
+[0;32mI (83683) NimBLE: att_handle=16[0m
+
+[0;32mI (83793) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (84343) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (84343) OTA_HELPER: recv: 4096, recv_total:421888[0m
+
+[0;32mI (84343) NimBLE: att_handle=16[0m
+
+[0;32mI (84793) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (84973) OTA_HELPER: recv: 4096, recv_total:425984[0m
+
+[0;32mI (84973) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (84983) NimBLE: att_handle=16[0m
+
+[0;32mI (85543) OTA_HELPER: recv: 4096, recv_total:430080[0m
+
+[0;32mI (85553) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (85553) NimBLE: att_handle=16[0m
+
+[0;32mI (85793) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (86333) OTA_HELPER: recv: 4096, recv_total:434176[0m
+
+[0;32mI (86333) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (86343) NimBLE: att_handle=16[0m
+
+[0;32mI (86793) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (87283) OTA_HELPER: recv: 4096, recv_total:438272[0m
+
+[0;32mI (87283) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (87293) NimBLE: att_handle=16[0m
+
+[0;32mI (87793) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (87803) OTA_HELPER: recv: 4096, recv_total:442368[0m
+
+[0;32mI (87803) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (87813) NimBLE: att_handle=16[0m
+
+[0;32mI (88493) OTA_HELPER: recv: 4096, recv_total:446464[0m
+
+[0;32mI (88493) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (88503) NimBLE: att_handle=16[0m
+
+[0;32mI (88793) HELLO WORLD: Restarting now.[0m
+[0;32mI (88793) HELLO WORLD: Hello World![0m
+[0;32mI (88793) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (88793) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (88793) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (88803) HELLO WORLD: Minimum free heap size: 245784 bytes[0m
+
+[0;32mI (88803) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (89063) OTA_HELPER: recv: 4096, recv_total:450560[0m
+
+[0;32mI (89063) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (89073) NimBLE: att_handle=16[0m
+
+[0;32mI (89613) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (89613) OTA_HELPER: recv: 4096, recv_total:454656[0m
+
+[0;32mI (89613) NimBLE: att_handle=16[0m
+
+[0;32mI (89813) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (90273) OTA_HELPER: recv: 4096, recv_total:458752[0m
+
+[0;32mI (90273) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (90283) NimBLE: att_handle=16[0m
+
+[0;32mI (90813) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (90873) OTA_HELPER: recv: 4096, recv_total:462848[0m
+
+[0;32mI (90873) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (90883) NimBLE: att_handle=16[0m
+
+[0;32mI (91503) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (91503) OTA_HELPER: recv: 4096, recv_total:466944[0m
+
+[0;32mI (91503) NimBLE: att_handle=16[0m
+
+[0;32mI (91813) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (92113) OTA_HELPER: recv: 4096, recv_total:471040[0m
+
+[0;32mI (92113) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (92123) NimBLE: att_handle=16[0m
+
+[0;32mI (92763) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (92763) OTA_HELPER: recv: 4096, recv_total:475136[0m
+
+[0;32mI (92763) NimBLE: att_handle=16[0m
+
+[0;32mI (92813) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (93393) OTA_HELPER: recv: 4096, recv_total:479232[0m
+
+[0;32mI (93393) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (93403) NimBLE: att_handle=16[0m
+
+[0;32mI (93813) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (94053) OTA_HELPER: recv: 4096, recv_total:483328[0m
+
+[0;32mI (94053) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (94063) NimBLE: att_handle=16[0m
+
+[0;32mI (94653) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (94653) OTA_HELPER: recv: 4096, recv_total:487424[0m
+
+[0;32mI (94653) NimBLE: att_handle=16[0m
+
+[0;32mI (94813) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (95213) OTA_HELPER: recv: 4096, recv_total:491520[0m
+
+[0;32mI (95213) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (95223) NimBLE: att_handle=16[0m
+
+[0;32mI (95813) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (95973) OTA_HELPER: recv: 4096, recv_total:495616[0m
+
+[0;32mI (95973) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (95983) NimBLE: att_handle=16[0m
+
+[0;32mI (96493) OTA_HELPER: recv: 4096, recv_total:499712[0m
+
+[0;32mI (96493) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (96503) NimBLE: att_handle=16[0m
+
+[0;32mI (96813) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (97103) OTA_HELPER: recv: 4096, recv_total:503808[0m
+
+[0;32mI (97103) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (97113) NimBLE: att_handle=16[0m
+
+[0;32mI (97673) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (97673) OTA_HELPER: recv: 4096, recv_total:507904[0m
+
+[0;32mI (97673) NimBLE: att_handle=16[0m
+
+[0;32mI (97813) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (98283) OTA_HELPER: recv: 4096, recv_total:512000[0m
+
+[0;32mI (98283) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (98293) NimBLE: att_handle=16[0m
+
+[0;32mI (98813) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (98853) OTA_HELPER: recv: 4096, recv_total:516096[0m
+
+[0;32mI (98853) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (98863) NimBLE: att_handle=16[0m
+
+[0;32mI (99433) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (99433) OTA_HELPER: recv: 4096, recv_total:520192[0m
+
+[0;32mI (99433) NimBLE: att_handle=16[0m
+
+[0;32mI (99813) HELLO WORLD: Restarting now.[0m
+[0;32mI (99813) HELLO WORLD: Hello World![0m
+[0;32mI (99813) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (99813) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (99813) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (99823) HELLO WORLD: Minimum free heap size: 245784 bytes[0m
+
+[0;32mI (99823) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (100043) OTA_HELPER: recv: 4096, recv_total:524288[0m
+
+[0;32mI (100043) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (100053) NimBLE: att_handle=16[0m
+
+[0;32mI (100693) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (100693) OTA_HELPER: recv: 4096, recv_total:528384[0m
+
+[0;32mI (100693) NimBLE: att_handle=16[0m
+
+[0;32mI (100833) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (101353) OTA_HELPER: recv: 4096, recv_total:532480[0m
+
+[0;32mI (101353) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (101363) NimBLE: att_handle=16[0m
+
+[0;32mI (101833) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (102003) OTA_HELPER: recv: 4096, recv_total:536576[0m
+
+[0;32mI (102003) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (102013) NimBLE: att_handle=16[0m
+
+[0;32mI (102663) OTA_HELPER: recv: 4096, recv_total:540672[0m
+
+[0;32mI (102663) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (102673) NimBLE: att_handle=16[0m
+
+[0;32mI (102833) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (103263) OTA_HELPER: recv: 4096, recv_total:544768[0m
+
+[0;32mI (103263) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (103283) NimBLE: att_handle=16[0m
+
+[0;32mI (103833) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (103893) OTA_HELPER: recv: 4096, recv_total:548864[0m
+
+[0;32mI (103893) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (103913) NimBLE: att_handle=16[0m
+
+[0;32mI (104583) OTA_HELPER: recv: 4096, recv_total:552960[0m
+
+[0;32mI (104583) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (104593) NimBLE: att_handle=16[0m
+
+[0;32mI (104833) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (105153) OTA_HELPER: recv: 4096, recv_total:557056[0m
+
+[0;32mI (105153) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (105163) NimBLE: att_handle=16[0m
+
+[0;32mI (105733) OTA_HELPER: recv: 4096, recv_total:561152[0m
+
+[0;32mI (105733) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (105743) NimBLE: att_handle=16[0m
+
+[0;32mI (105833) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (106363) OTA_HELPER: recv: 4096, recv_total:565248[0m
+
+[0;32mI (106363) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (106373) NimBLE: att_handle=16[0m
+
+[0;32mI (106573) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (106573) OTA_HELPER: recv: 1026, recv_total:566274[0m
+
+[0;32mI (106573) NimBLE: att_handle=16[0m
+
+[0;32mI (106583) esp_image: segment 0: paddr=00810020 vaddr=3c060020 size=173ach ( 95148) map[0m
+[0;32mI (106593) esp_image: segment 1: paddr=008273d4 vaddr=3fc9ba00 size=04294h ( 17044) [0m
+[0;32mI (106603) esp_image: segment 2: paddr=0082b670 vaddr=40374000 size=049a8h ( 18856) [0m
+[0;32mI (106603) esp_image: segment 3: paddr=00830020 vaddr=42000020 size=57434h (357428) map[0m
+
+CMD_CHAR -> 0 : 2, 1 : 0I (106633) NimBLE: GATT procedure initiated: notify; 
+[0;32mI (106633) NimBLE: att_handle=22[0m
+
+[0;32mI (106653) esp_image: segment 4: paddr=0088745c vaddr=403789a8 size=12f50h ( 77648) [0m
+[0;32mI (106663) esp_image: segment 5: paddr=0089a3b4 vaddr=600fe000 size=00020h (    32) [0m
+[0;32mI (106663) esp_image: segment 0: paddr=00810020 vaddr=3c060020 size=173ach ( 95148) map[0m
+[0;32mI (106683) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 4[0m
+[0;32mI (106683) esp_image: segment 1: paddr=008273d4 vaddr=3fc9ba00 size=04294h ( 17044) [0m
+[0;32mI (106683) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=8 reason=2 prevn=0 curn=0 previ=1 curi=0[0m
+
+[0;32mI (106683) esp_image: segment 2: paddr=0082b670 vaddr=40374000 size=049a8h ( 18856) [0m
+[0;32mI (106693) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 0[0m
+[0;32mI (106703) esp_image: segment 3: paddr=00830020 vaddr=42000020 size=57434h (357428) map[0m
+[0;32mI (106703) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=16 reason=2 prevn=0 curn=0 previ=1 curi=0[0m
+
+[0;32mI (106723) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 1[0m
+[0;32mI (106733) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=19 reason=2 prevn=0 curn=0 previ=1 curi=0[0m
+
+[0;32mI (106743) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 2[0m
+[0;32mI (106743) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=22 reason=2 prevn=0 curn=0 previ=1 curi=0[0m
+
+[0;32mI (106763) NimBLE_BLE_OTA: disconnect; reason=531 [0m
+[0;32mI (106763) NimBLE_BLE_OTA: handle=1 our_ota_addr_type=0 our_ota_addr=[0m
+[0;32mI (106763) esp_image: segment 4: paddr=0088745c vaddr=403789a8 size=12f50h ( 77648) [0m
+[0;32mI (106773) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (106783) NimBLE_BLE_OTA:  our_id_addr_type=0 our_id_addr=[0m
+[0;32mI (106783) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (106783) esp_image: segment 5: paddr=0089a3b4 vaddr=600fe000 size=00020h (    32) [0m
+[0;32mI (106793) NimBLE_BLE_OTA:  peer_ota_addr_type=1 peer_ota_addr=[0m
+[0;32mI (106803) NimBLE_BLE_OTA: 57:b9:80:fe:24:69[0m
+[0;32mI (106833) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (106833) NimBLE_BLE_OTA:  peer_id_addr_type=1 peer_id_addr=[0m
+[0;32mI (106833) NimBLE_BLE_OTA: 57:b9:80:fe:24:69[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xb (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42007487
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1598
+load:0x403c8700,len:0xd20
+load:0x403cb700,len:0x2f9c
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v6.0-dev-940-g76cec451ce 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jul  9 2025 14:02:32[0m
+[0;32mI (24) boot: Multicore bootloader[0m
+[0;32mI (26) boot: chip revision: v0.2[0m
+[0;32mI (29) boot: efuse block revision: v1.3[0m
+[0;32mI (32) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (36) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (70) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (77) boot:  3 ota_0            OTA app          00 10 00020000 007f0000[0m
+[0;32mI (83) boot:  4 ota_1            OTA app          00 11 00810000 007f0000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (130) esp_image: segment 0: paddr=00810020 vaddr=3c060020 size=173ach ( 95148) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=008273d4 vaddr=3fc9ba00 size=04294h ( 17044) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0082b670 vaddr=40374000 size=049a8h ( 18856) load[0m
+[0;32mI (156) esp_image: segment 3: paddr=00830020 vaddr=42000020 size=57434h (357428) map[0m
+[0;32mI (222) esp_image: segment 4: paddr=0088745c vaddr=403789a8 size=12f50h ( 77648) load[0m
+[0;32mI (239) esp_image: segment 5: paddr=0089a3b4 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (250) boot: Loaded app from partition at offset 0x810000[0m
+[0;32mI (250) boot: Disabling RNG early entropy source...[0m
+[0;32mI (260) cpu_start: Multicore app[0m
+[0;32mI (269) cpu_start: Pro cpu start user code[0m
+[0;32mI (269) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (270) app_init: Application information:[0m
+[0;32mI (270) app_init: Project name:     ble_ota_blink[0m
+[0;32mI (274) app_init: App version:      1[0m
+[0;32mI (277) app_init: Compile time:     Jul  9 2025 15:20:33[0m
+[0;32mI (282) app_init: ELF file SHA256:  329e0bbe5...[0m
+[0;32mI (287) app_init: ESP-IDF:          v6.0-dev-940-g76cec451ce[0m
+[0;32mI (292) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (296) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (300) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (304) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (310) heap_init: At 3FCA21D0 len 00047540 (285 KiB): RAM[0m
+[0;32mI (315) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (320) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (325) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (332) spi_flash: detected chip: gd[0m
+[0;32mI (334) spi_flash: flash io: dio[0m
+[0;32mI (337) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (343) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (350) coexist: coex firmware version: 831ec70[0m
+[0;32mI (354) coexist: coexist rom version e7ae62f[0m
+[0;32mI (359) main_task: Started on CPU0[0m
+[0;32mI (369) main_task: Calling app_main()[0m
+[0;32mI (369) APP_MAIN: Initializing nvs flash[0m
+[0;32mI (379) APP_MAIN: Initializing BLE OTA & Hello World & Blink task[0m
+[0;32mI (379) BLE_INIT: BT controller compile version [4713a69][0m
+[0;32mI (379) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (389) BLE_INIT: Bluetooth MAC: 24:58:7c:de:8c:9e[0m
+[0;32mI (389) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (439) NimBLE_BLE_OTA: BLE Host Task Started[0m
+[0;32mI (439) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (439) NimBLE_BLE_OTA: Device Address: [0m
+[0;32mI (439) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (439) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (449) NimBLE: disc_mode=2[0m
+[0;32mI (449) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (459) NimBLE: [0m
+
+[0;32mI (459) LED_BLINK: Initializing Blink GPIO LED[0m
+[0;32mI (459) LED_BLINK: Starting Blink Task[0m
+[0;32mI (469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (469) HELLO WORLD: Hello World![0m
+[0;32mI (469) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (479) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (479) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (489) HELLO WORLD: Minimum free heap size: 248328 bytes[0m
+
+[0;32mI (489) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (499) APP_MAIN: System initialization complete[0m
+[0;32mI (1469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (1499) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (2469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (2499) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (3469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (3499) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (4469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (4499) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (5469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (5499) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (6469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (6499) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (7469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (7499) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (8469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (8499) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (9469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (9499) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (10469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (10499) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (11469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (11499) HELLO WORLD: Restarting now.[0m
+[0;32mI (11499) HELLO WORLD: Hello World![0m
+[0;32mI (11499) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (11499) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (11499) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (11509) HELLO WORLD: Minimum free heap size: 248328 bytes[0m
+
+[0;32mI (11509) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (12469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (12519) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (13469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (13519) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (14469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (14519) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (15469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (15519) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (16469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (16519) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (17469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (17519) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (17519) NimBLE_BLE_OTA: connection established; status=0 [0m
+[0;32mI (17519) NimBLE_BLE_OTA: handle=1 our_ota_addr_type=0 our_ota_addr=[0m
+[0;32mI (17519) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (17519) NimBLE_BLE_OTA:  our_id_addr_type=0 our_id_addr=[0m
+[0;32mI (17529) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (17529) NimBLE_BLE_OTA:  peer_ota_addr_type=1 peer_ota_addr=[0m
+[0;32mI (17539) NimBLE_BLE_OTA: 57:b9:80:fe:24:69[0m
+[0;32mI (17539) NimBLE_BLE_OTA:  peer_id_addr_type=1 peer_id_addr=[0m
+[0;32mI (17549) NimBLE_BLE_OTA: 57:b9:80:fe:24:69[0m
+[0;32mI (17549) NimBLE_BLE_OTA:  conn_itvl=21 conn_latency=0 supervision_timeout=72 encrypted=0 authenticated=0 bonded=0[0m
+
+[0;32mI (17779) NimBLE_BLE_OTA: mtu update event; conn_handle=1 cid=4 mtu=517[0m
+
+[0;32mI (17989) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 4[0m
+[0;32mI (17989) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=8 reason=1 prevn=0 curn=0 previ=0 curi=1[0m
+
+[0;32mI (18199) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 0[0m
+[0;32mI (18199) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=16 reason=1 prevn=0 curn=0 previ=0 curi=1[0m
+
+[0;32mI (18309) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 1[0m
+[0;32mI (18309) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=19 reason=1 prevn=0 curn=0 previ=0 curi=1[0m
+
+[0;32mI (18409) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 2[0m
+[0;32mI (18409) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=22 reason=1 prevn=0 curn=0 previ=0 curi=1[0m
+
+[0;32mI (18459) NimBLE_BLE_OTA: recv ota start cmd, fw_length = 566272[0m
+[0;32mI (18469) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (18469) NimBLE: att_handle=22[0m
+
+[0;32mI (18469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (18519) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (19039) OTA_HELPER: ota_task start[0m
+[0;32mI (19039) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (19039) NimBLE: att_handle=16[0m
+
+[1;31mE (19039) esp_ota_ops: Running app has not confirmed state (ESP_OTA_IMG_PENDING_VERIFY)[0m
+[1;31mE (19049) OTA_HELPER: esp_ota_begin failed![0m
+
+[1;31mE (19049) OTA_HELPER: OTA failed[0m
+[0;32mI (19469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (19519) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (19569) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (19569) NimBLE: att_handle=16[0m
+
+[0;32mI (20469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (20519) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (21469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (21519) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (22469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (22519) HELLO WORLD: Restarting now.[0m
+[0;32mI (22519) HELLO WORLD: Hello World![0m
+[0;32mI (22519) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (22519) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (22519) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (22529) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (22529) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (23469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (23539) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (24469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (24539) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (25469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (25539) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (26469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (26539) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (27469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (27539) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (28469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (28539) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (29469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (29539) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (30469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (30539) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (31469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (31539) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (32469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (32539) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (33469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (33539) HELLO WORLD: Restarting now.[0m
+[0;32mI (33539) HELLO WORLD: Hello World![0m
+[0;32mI (33539) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (33539) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (33539) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (33549) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (33549) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (34469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (34559) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (35469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (35559) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (36469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (36559) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (37469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (37559) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (38469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (38559) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (39469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (39559) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (40469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (40559) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (41469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (41559) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (42469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (42559) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (43469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (43559) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (44469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (44559) HELLO WORLD: Restarting now.[0m
+[0;32mI (44559) HELLO WORLD: Hello World![0m
+[0;32mI (44559) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (44559) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (44559) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (44569) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (44569) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (45469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (45579) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (46469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (46579) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (47469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (47579) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (48469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (48579) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (49469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (49579) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (50469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (50579) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (51469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (51579) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (52469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (52579) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (53469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (53579) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (54469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (54579) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (55469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (55579) HELLO WORLD: Restarting now.[0m
+[0;32mI (55579) HELLO WORLD: Hello World![0m
+[0;32mI (55579) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (55579) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (55579) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (55589) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (55589) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (56469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (56599) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (57469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (57599) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (58469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (58599) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (59469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (59599) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (60469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (60599) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (61469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (61599) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (62469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (62599) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (63469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (63599) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (64469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (64599) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (65469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (65599) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (66469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (66599) HELLO WORLD: Restarting now.[0m
+[0;32mI (66599) HELLO WORLD: Hello World![0m
+[0;32mI (66599) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (66599) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (66599) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (66609) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (66609) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (67469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (67619) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (68469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (68619) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (69469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (69619) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (70469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (70619) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (71469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (71619) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (72469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (72619) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (73469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (73619) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (74469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (74619) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (75469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (75619) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (76469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (76619) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (77469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (77619) HELLO WORLD: Restarting now.[0m
+[0;32mI (77619) HELLO WORLD: Hello World![0m
+[0;32mI (77619) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (77619) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (77619) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (77629) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (77629) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (78469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (78639) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (79469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (79639) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (80469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (80639) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (81469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (81639) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (82469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (82639) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (83469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (83639) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (84469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (84639) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (85469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (85639) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (86469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (86639) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (87469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (87639) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (88469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (88639) HELLO WORLD: Restarting now.[0m
+[0;32mI (88639) HELLO WORLD: Hello World![0m
+[0;32mI (88639) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (88639) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (88639) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (88649) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (88649) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (89469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (89659) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (90469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (90659) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (91469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (91659) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (92469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (92659) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (93469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (93659) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (94469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (94659) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (95469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (95659) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (96469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (96659) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (97469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (97659) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (98469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (98659) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (99469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (99659) HELLO WORLD: Restarting now.[0m
+[0;32mI (99659) HELLO WORLD: Hello World![0m
+[0;32mI (99659) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (99659) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (99659) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (99669) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (99669) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (100469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (100679) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (101469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (101679) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (102469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (102679) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (103469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (103679) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (104469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (104679) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (105469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (105679) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (106469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (106679) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (107469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (107679) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (108469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (108679) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (109469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (109679) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (110469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (110679) HELLO WORLD: Restarting now.[0m
+[0;32mI (110679) HELLO WORLD: Hello World![0m
+[0;32mI (110679) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (110679) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (110679) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (110689) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (110689) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (111469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (111699) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (112469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (112699) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (113469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (113699) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (114469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (114699) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (115469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (115699) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (116469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (116699) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (117469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (117699) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (118469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (118699) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (119469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (119699) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (120469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (120699) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (121469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (121699) HELLO WORLD: Restarting now.[0m
+[0;32mI (121699) HELLO WORLD: Hello World![0m
+[0;32mI (121699) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (121699) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (121699) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (121709) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (121709) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (122469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (122719) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (123469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (123719) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (124469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (124719) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (125469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (125719) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (126469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (126719) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (127469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (127719) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (128469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (128719) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (129469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (129719) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (130469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (130719) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (131469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (131719) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (132469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (132719) HELLO WORLD: Restarting now.[0m
+[0;32mI (132719) HELLO WORLD: Hello World![0m
+[0;32mI (132719) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (132719) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (132719) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (132729) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (132729) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (133469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (133739) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (134469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (134739) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (135469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (135739) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (136469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (136739) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (137469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (137739) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (138469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (138739) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (139469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (139739) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (140469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (140739) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (141469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (141739) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (142469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (142739) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (143469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (143739) HELLO WORLD: Restarting now.[0m
+[0;32mI (143739) HELLO WORLD: Hello World![0m
+[0;32mI (143739) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (143739) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (143739) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (143749) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (143749) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (144469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (144759) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (145469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (145759) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (146469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (146759) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (147469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (147759) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (148469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (148759) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (149469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (149759) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (150469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (150759) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (151469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (151759) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (152469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (152759) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (153469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (153759) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (154469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (154759) HELLO WORLD: Restarting now.[0m
+[0;32mI (154759) HELLO WORLD: Hello World![0m
+[0;32mI (154759) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (154759) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (154759) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (154769) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (154769) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (155469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (155779) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (156469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (156779) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (157469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (157779) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (158469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (158779) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (159469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (159779) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (160469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (160779) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (161469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (161779) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (162469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (162779) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (163469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (163779) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (164469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (164779) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (165469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (165779) HELLO WORLD: Restarting now.[0m
+[0;32mI (165779) HELLO WORLD: Hello World![0m
+[0;32mI (165779) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (165779) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (165779) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (165789) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (165789) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (166469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (166799) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (167469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (167799) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (168469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (168799) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (169469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (169799) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (170469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (170799) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (171469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (171799) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (172469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (172799) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (173469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (173799) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (174469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (174799) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (175469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (175799) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (176469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (176799) HELLO WORLD: Restarting now.[0m
+[0;32mI (176799) HELLO WORLD: Hello World![0m
+[0;32mI (176799) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (176799) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (176799) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (176809) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (176809) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (177469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (177819) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (178469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (178819) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (179469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (179819) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (180469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (180819) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (181469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (181819) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (182469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (182819) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (183469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (183819) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (184469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (184819) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (185469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (185819) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (186469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (186819) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (187469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (187819) HELLO WORLD: Restarting now.[0m
+[0;32mI (187819) HELLO WORLD: Hello World![0m
+[0;32mI (187819) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (187819) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (187819) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (187829) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (187829) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (188469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (188839) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (189469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (189839) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (190469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (190839) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (191469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (191839) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (192469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (192839) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (193469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (193839) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (194469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (194839) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (195469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (195839) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (196469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (196839) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (197469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (197839) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (198469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (198839) HELLO WORLD: Restarting now.[0m
+[0;32mI (198839) HELLO WORLD: Hello World![0m
+[0;32mI (198839) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (198839) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (198839) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (198849) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (198849) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (199469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (199859) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (200469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (200859) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (201469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (201859) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (202469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (202859) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (203469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (203859) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (204469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (204859) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (205469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (205859) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (206469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (206859) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (207469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (207859) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (208469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (208859) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (209469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (209859) HELLO WORLD: Restarting now.[0m
+[0;32mI (209859) HELLO WORLD: Hello World![0m
+[0;32mI (209859) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (209859) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (209859) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (209869) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (209869) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (210469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (210879) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (211469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (211879) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (212469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (212879) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (213469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (213879) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (214469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (214879) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (215469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (215879) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (216469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (216879) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (217469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (217879) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (218469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (218879) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (219469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (219879) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (220469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (220879) HELLO WORLD: Restarting now.[0m
+[0;32mI (220879) HELLO WORLD: Hello World![0m
+[0;32mI (220879) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (220879) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (220879) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (220889) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (220889) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (221469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (221899) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (222469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (222899) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (223469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (223899) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (224469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (224899) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (225469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (225899) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (226469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (226899) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (227469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (227899) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (228469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (228899) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (229469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (229899) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (230469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (230899) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (231469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (231899) HELLO WORLD: Restarting now.[0m
+[0;32mI (231899) HELLO WORLD: Hello World![0m
+[0;32mI (231899) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (231899) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (231899) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (231909) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (231909) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (232469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (232919) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (233469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (233919) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (234469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (234919) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (235469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (235919) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (236469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (236919) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (237469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (237919) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (238469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (238919) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (239469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (239919) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (240469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (240919) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (241469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (241919) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (242469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (242919) HELLO WORLD: Restarting now.[0m
+[0;32mI (242919) HELLO WORLD: Hello World![0m
+[0;32mI (242919) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (242919) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (242919) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (242929) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (242929) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (243469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (243939) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (244469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (244939) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (245469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (245939) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (246469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (246939) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (247469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (247939) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (248469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (248939) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (249469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (249939) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (250469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (250939) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (251469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (251939) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (252469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (252939) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (253469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (253939) HELLO WORLD: Restarting now.[0m
+[0;32mI (253939) HELLO WORLD: Hello World![0m
+[0;32mI (253939) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (253939) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (253939) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (253949) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (253949) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (254469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (254959) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (255469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (255959) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (256469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (256959) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (257469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (257959) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (258469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (258959) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (259469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (259959) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (260469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (260959) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (261469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (261959) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (262469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (262959) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (263469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (263959) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (264469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (264959) HELLO WORLD: Restarting now.[0m
+[0;32mI (264959) HELLO WORLD: Hello World![0m
+[0;32mI (264959) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (264959) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (264959) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (264969) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (264969) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (265469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (265979) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (266469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (266979) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (267469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (267979) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (268469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (268979) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (269469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (269979) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (270469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (270979) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (271469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (271979) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (272469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (272979) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (273469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (273979) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (274469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (274979) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (275469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (275979) HELLO WORLD: Restarting now.[0m
+[0;32mI (275979) HELLO WORLD: Hello World![0m
+[0;32mI (275979) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (275979) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (275979) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (275989) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (275989) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (276469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (276999) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (277469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (277999) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (278469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (278999) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (279469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (279999) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (280469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (280999) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (281469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (281999) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (282469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (282999) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (283469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (283999) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (284469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (284999) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (285469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (285999) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (286469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (286999) HELLO WORLD: Restarting now.[0m
+[0;32mI (286999) HELLO WORLD: Hello World![0m
+[0;32mI (286999) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (286999) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (286999) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (287009) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (287009) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (287469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (288019) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (288469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (289019) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (289469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (290019) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (290469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (291019) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (291469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (292019) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (292469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (293019) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (293469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (294019) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (294469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (295019) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (295469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (296019) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (296469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (297019) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (297469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (298019) HELLO WORLD: Restarting now.[0m
+[0;32mI (298019) HELLO WORLD: Hello World![0m
+[0;32mI (298019) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (298019) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (298019) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (298029) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (298029) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (298469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (299039) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (299469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (300039) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (300469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (301039) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (301469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (302039) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (302469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (303039) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (303469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (304039) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (304469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (305039) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (305469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (306039) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (306469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (307039) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (307469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (308039) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (308469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (309039) HELLO WORLD: Restarting now.[0m
+[0;32mI (309039) HELLO WORLD: Hello World![0m
+[0;32mI (309039) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (309039) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (309039) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (309049) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (309049) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (309469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (310059) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (310469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (311059) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (311469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (312059) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (312469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (313059) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (313469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (314059) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (314469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (315059) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (315469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (316059) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (316469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (317059) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (317469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (318059) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (318469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (319059) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (319469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (320059) HELLO WORLD: Restarting now.[0m
+[0;32mI (320059) HELLO WORLD: Hello World![0m
+[0;32mI (320059) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (320059) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (320059) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (320069) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (320069) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (320469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (321079) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (321469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (322079) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (322469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (323079) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (323469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (324079) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (324469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (325079) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (325469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (326079) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (326469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (327079) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (327469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (328079) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (328469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (329079) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (329469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (330079) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (330469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (331079) HELLO WORLD: Restarting now.[0m
+[0;32mI (331079) HELLO WORLD: Hello World![0m
+[0;32mI (331079) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (331079) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (331079) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (331089) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (331089) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (331469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (332099) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (332469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (333099) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (333469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (334099) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (334469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (335099) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (335469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (336099) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (336469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (337099) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (337469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (338099) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (338469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (339099) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (339469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (340099) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (340469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (341099) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (341469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (342099) HELLO WORLD: Restarting now.[0m
+[0;32mI (342099) HELLO WORLD: Hello World![0m
+[0;32mI (342099) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (342099) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (342099) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (342109) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (342109) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (342469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (343119) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (343469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (344119) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (344469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (345119) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (345469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (346119) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (346469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (347119) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (347469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (348119) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (348469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (349119) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (349469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (350119) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (350469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (351119) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (351469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (352119) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (352469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (353119) HELLO WORLD: Restarting now.[0m
+[0;32mI (353119) HELLO WORLD: Hello World![0m
+[0;32mI (353119) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (353119) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (353119) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (353129) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (353129) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (353469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (354139) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (354469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (355139) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (355469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (356139) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (356469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (357139) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (357469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (358139) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (358469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (359139) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (359469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (360139) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (360469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (361139) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (361469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (362139) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (362469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (363139) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (363469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (364139) HELLO WORLD: Restarting now.[0m
+[0;32mI (364139) HELLO WORLD: Hello World![0m
+[0;32mI (364139) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (364139) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (364139) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (364149) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (364149) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (364469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (365159) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (365469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (366159) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (366469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (367159) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (367469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (368159) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (368469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (369159) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (369469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (370159) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (370469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (371159) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (371469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (372159) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (372469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (373159) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (373469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (374159) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (374469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (375159) HELLO WORLD: Restarting now.[0m
+[0;32mI (375159) HELLO WORLD: Hello World![0m
+[0;32mI (375159) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (375159) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (375159) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (375169) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (375169) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (375469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (376179) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (376469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (377179) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (377469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (378179) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (378469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (379179) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (379469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (380179) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (380469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (381179) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (381469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (382179) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (382469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (383179) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (383469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (384179) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (384469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (385179) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (385469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (386179) HELLO WORLD: Restarting now.[0m
+[0;32mI (386179) HELLO WORLD: Hello World![0m
+[0;32mI (386179) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (386179) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (386179) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (386189) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (386189) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (386469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (387199) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (387469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (388199) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (388469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (389199) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (389469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (390199) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (390469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (391199) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (391469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (392199) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (392469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (393199) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (393469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (394199) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (394469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (395199) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (395469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (396199) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (396469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (397199) HELLO WORLD: Restarting now.[0m
+[0;32mI (397199) HELLO WORLD: Hello World![0m
+[0;32mI (397199) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (397199) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (397199) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (397209) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (397209) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (397469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (398219) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (398469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (399219) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (399469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (400219) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (400469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (401219) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (401469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (402219) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (402469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (403219) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (403469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (404219) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (404469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (405219) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (405469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (406219) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (406469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (407219) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (407469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (408219) HELLO WORLD: Restarting now.[0m
+[0;32mI (408219) HELLO WORLD: Hello World![0m
+[0;32mI (408219) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (408219) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (408219) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (408229) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (408229) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (408469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (409239) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (409469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (410239) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (410469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (411239) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (411469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (412239) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (412469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (413239) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (413469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (414239) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (414469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (415239) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (415469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (416239) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (416469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (417239) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (417469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (418239) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (418469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (419239) HELLO WORLD: Restarting now.[0m
+[0;32mI (419239) HELLO WORLD: Hello World![0m
+[0;32mI (419239) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (419239) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (419239) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (419249) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (419249) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (419469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (420259) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (420469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (421259) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (421469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (422259) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (422469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (423259) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (423469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (424259) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (424469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (425259) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (425469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (426259) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (426469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (427259) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (427469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (428259) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (428469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (429259) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (429469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (430259) HELLO WORLD: Restarting now.[0m
+[0;32mI (430259) HELLO WORLD: Hello World![0m
+[0;32mI (430259) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (430259) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (430259) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (430269) HELLO WORLD: Minimum free heap size: 235388 bytes[0m
+
+[0;32mI (430269) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (430469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (431279) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (431469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (432279) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (432469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (433279) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (433469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (434279) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (434469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (435279) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (435469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (436279) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (436469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (437279) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (437469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (438279) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (438469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (439279) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (439469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (440279) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (440469) LED_BLINK: Turning the LED OFF![0m

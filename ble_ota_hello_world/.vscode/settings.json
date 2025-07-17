@@ -1,0 +1,26 @@
+{
+  "idf.port": "/dev/ttyACM0",
+  "idf.openOcdConfigs": [
+    "board/esp32s3-builtin.cfg"
+  ],
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32s3"
+  },
+  "clangd.path": "/home/dennis0405/.espressif/tools/esp-clang/esp-19.1.2_20250312/esp-clang/bin/clangd",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=/home/dennis0405/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc",
+    "--compile-commands-dir=/home/dennis0405/ble_ota_hello_world/build"
+  ],
+  "files.associations": {
+    "ble_ota.h": "c",
+    "esp_chip_info.h": "c",
+    "hello_world.h": "c",
+    "semphr.h": "c",
+    "esp_log.h": "c",
+    "esp_system.h": "c",
+    "esp_flash.h": "c",
+    "esp_bt.h": "c"
+  },
+  "idf.flashType": "UART"
+}

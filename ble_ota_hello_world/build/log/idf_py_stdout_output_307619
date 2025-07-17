@@ -1,0 +1,2275 @@
+Command: /home/dennis0405/.espressif/python_env/idf6.0_py3.10_env/bin/python /home/dennis0405/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/dennis0405/ble_ota_hello_world/build/ble_ota_hello_world.elf /home/dennis0405/ble_ota_hello_world/build/bootloader/bootloader.elf -m '/home/dennis0405/.espressif/python_env/idf6.0_py3.10_env/bin/python' '/home/dennis0405/esp/esp-idf/tools/idf.py'
+[0;32mI (120) esp_image: segment 1: paddr=00035d54 vaddr=3fc9a700 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xb (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037df32
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1598
+load:0x403c8700,len:0xd20
+load:0x403cb700,len:0x2f9c
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v6.0-dev-940-g76cec451ce 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Jul  9 2025 14:02:32[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (26) boot: chip revision: v0.2[0m
+[0;32mI (29) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (71) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (77) boot:  3 ota_0            OTA app          00 10 00020000 007f0000[0m
+[0;32mI (84) boot:  4 ota_1            OTA app          00 11 00810000 007f0000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (94) esp_image: segment 0: paddr=00020020 vaddr=3c060020 size=15d2ch ( 89388) map[0m
+[0;32mI (117) esp_image: segment 1: paddr=00035d54 vaddr=3fc9a700 size=041d4h ( 16852) load[0m
+[0;32mI (120) esp_image: segment 2: paddr=00039f30 vaddr=40374000 size=060e8h ( 24808) load[0m
+[0;32mI (126) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=54580h (345472) map[0m
+[0;32mI (189) esp_image: segment 4: paddr=000945a8 vaddr=4037a0e8 size=105b8h ( 67000) load[0m
+[0;32mI (204) esp_image: segment 5: paddr=000a4b68 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (214) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (214) boot: Disabling RNG early entropy source...[0m
+[0;32mI (224) cpu_start: Multicore app[0m
+[0;32mI (233) cpu_start: Pro cpu start user code[0m
+[0;32mI (233) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (233) app_init: Application information:[0m
+[0;32mI (234) app_init: Project name:     ble_ota_hello_world[0m
+[0;32mI (238) app_init: App version:      1[0m
+[0;32mI (242) app_init: Compile time:     Jul  9 2025 14:02:16[0m
+[0;32mI (247) app_init: ELF file SHA256:  c0e43b798...[0m
+[0;32mI (251) app_init: ESP-IDF:          v6.0-dev-940-g76cec451ce[0m
+[0;32mI (256) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (260) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (264) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (268) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (274) heap_init: At 3FCA0DF8 len 00048918 (290 KiB): RAM[0m
+[0;32mI (279) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (285) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (290) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (296) spi_flash: detected chip: gd[0m
+[0;32mI (298) spi_flash: flash io: dio[0m
+[0;32mI (302) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (308) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (314) coexist: coex firmware version: 831ec70[0m
+[0;32mI (319) coexist: coexist rom version e7ae62f[0m
+[0;32mI (323) main_task: Started on CPU0[0m
+[0;32mI (333) main_task: Calling app_main()[0m
+[0;32mI (333) APP_MAIN: Initializing nvs flash[0m
+[0;32mI (343) APP_MAIN: Initializing BLE OTA and Hello World task[0m
+[0;32mI (343) BLE_INIT: BT controller compile version [4713a69][0m
+[0;32mI (343) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (353) BLE_INIT: Bluetooth MAC: 24:58:7c:de:8c:9e[0m
+[0;32mI (353) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (393) NimBLE_BLE_OTA: BLE Host Task Started[0m
+[0;32mI (403) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (403) NimBLE_BLE_OTA: Device Address: [0m
+[0;32mI (403) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (403) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (413) NimBLE: disc_mode=2[0m
+[0;32mI (413) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (423) NimBLE: [0m
+
+[0;32mI (423) HELLO WORLD: Hello World![0m
+[0;32mI (423) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (433) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (433) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (443) HELLO WORLD: Minimum free heap size: 258780 bytes[0m
+
+[0;32mI (443) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (453) APP_MAIN: System initialization complete[0m
+[0;32mI (1453) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (2453) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (3453) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (4453) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (5453) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (6453) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (7453) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (8453) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (9453) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (10453) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (11453) HELLO WORLD: Restarting now.[0m
+[0;32mI (11453) HELLO WORLD: Hello World![0m
+[0;32mI (11453) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (11453) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (11453) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (11463) HELLO WORLD: Minimum free heap size: 258780 bytes[0m
+
+[0;32mI (11463) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (12473) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (13473) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (14473) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (15403) NimBLE_BLE_OTA: connection established; status=0 [0m
+[0;32mI (15403) NimBLE_BLE_OTA: handle=1 our_ota_addr_type=0 our_ota_addr=[0m
+[0;32mI (15403) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (15413) NimBLE_BLE_OTA:  our_id_addr_type=0 our_id_addr=[0m
+[0;32mI (15413) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (15423) NimBLE_BLE_OTA:  peer_ota_addr_type=1 peer_ota_addr=[0m
+[0;32mI (15423) NimBLE_BLE_OTA: 7a:e2:ac:b1:de:63[0m
+[0;32mI (15433) NimBLE_BLE_OTA:  peer_id_addr_type=1 peer_id_addr=[0m
+[0;32mI (15433) NimBLE_BLE_OTA: 7a:e2:ac:b1:de:63[0m
+[0;32mI (15433) NimBLE_BLE_OTA:  conn_itvl=21 conn_latency=0 supervision_timeout=72 encrypted=0 authenticated=0 bonded=0[0m
+
+[0;32mI (15473) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (15673) NimBLE_BLE_OTA: mtu update event; conn_handle=1 cid=4 mtu=517[0m
+
+[0;32mI (15873) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 4[0m
+[0;32mI (15883) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=8 reason=1 prevn=0 curn=0 previ=0 curi=1[0m
+
+[0;32mI (16113) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 0[0m
+[0;32mI (16113) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=16 reason=1 prevn=0 curn=0 previ=0 curi=1[0m
+
+[0;32mI (16223) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 1[0m
+[0;32mI (16223) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=19 reason=1 prevn=0 curn=0 previ=0 curi=1[0m
+
+[0;32mI (16323) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 2[0m
+[0;32mI (16323) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=22 reason=1 prevn=0 curn=0 previ=0 curi=1[0m
+
+[0;32mI (16373) NimBLE_BLE_OTA: recv ota start cmd, fw_length = 567120[0m
+[0;32mI (16373) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (16373) NimBLE: att_handle=22[0m
+
+[0;32mI (16473) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (17003) OTA_HELPER: ota_task start[0m
+[0;32mI (17003) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (17003) NimBLE: att_handle=16[0m
+
+[0;32mI (17553) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (18283) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (18283) NimBLE: att_handle=16[0m
+
+[0;32mI (18553) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (19563) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (20583) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (21603) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (21783) OTA_HELPER: wait for data from ringbuf! fw_len = 567120[0m
+[0;32mI (21783) OTA_HELPER: recv: 8192, recv_total:8192[0m
+
+[0;32mI (21813) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (21813) NimBLE: att_handle=16[0m
+
+[0;32mI (21813) OTA_HELPER: recv: 4096, recv_total:12288[0m
+
+[0;32mI (22493) OTA_HELPER: recv: 4096, recv_total:16384[0m
+
+[0;32mI (22493) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (22503) NimBLE: att_handle=16[0m
+
+[0;32mI (22603) HELLO WORLD: Restarting now.[0m
+[0;32mI (22603) HELLO WORLD: Hello World![0m
+[0;32mI (22603) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (22603) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (22603) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (22613) HELLO WORLD: Minimum free heap size: 245784 bytes[0m
+
+[0;32mI (22613) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (23333) OTA_HELPER: recv: 4096, recv_total:20480[0m
+
+[0;32mI (23333) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (23343) NimBLE: att_handle=16[0m
+
+[0;32mI (23623) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (24253) OTA_HELPER: recv: 4096, recv_total:24576[0m
+
+[0;32mI (24253) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (24263) NimBLE: att_handle=16[0m
+
+[0;32mI (24623) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (24983) OTA_HELPER: recv: 4096, recv_total:28672[0m
+
+[0;32mI (24983) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (24993) NimBLE: att_handle=16[0m
+
+[0;32mI (25593) OTA_HELPER: recv: 4096, recv_total:32768[0m
+
+[0;32mI (25593) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (25603) NimBLE: att_handle=16[0m
+
+[0;32mI (25623) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (26193) OTA_HELPER: recv: 4096, recv_total:36864[0m
+
+[0;32mI (26193) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (26203) NimBLE: att_handle=16[0m
+
+[0;32mI (26623) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (26823) OTA_HELPER: recv: 4096, recv_total:40960[0m
+
+[0;32mI (26823) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (26833) NimBLE: att_handle=16[0m
+
+[0;32mI (27503) OTA_HELPER: recv: 4096, recv_total:45056[0m
+
+[0;32mI (27503) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (27513) NimBLE: att_handle=16[0m
+
+[0;32mI (27623) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (28193) OTA_HELPER: recv: 4096, recv_total:49152[0m
+
+[0;32mI (28193) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (28203) NimBLE: att_handle=16[0m
+
+[0;32mI (28623) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (28843) OTA_HELPER: recv: 4096, recv_total:53248[0m
+
+[0;32mI (28843) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (28853) NimBLE: att_handle=16[0m
+
+[0;32mI (29533) OTA_HELPER: recv: 4096, recv_total:57344[0m
+
+[0;32mI (29533) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (29543) NimBLE: att_handle=16[0m
+
+[0;32mI (29623) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (30103) OTA_HELPER: recv: 4096, recv_total:61440[0m
+
+[0;32mI (30103) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (30113) NimBLE: att_handle=16[0m
+
+[0;32mI (30623) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (30713) OTA_HELPER: recv: 4096, recv_total:65536[0m
+
+[0;32mI (30713) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (30723) NimBLE: att_handle=16[0m
+
+[0;32mI (31313) OTA_HELPER: recv: 4096, recv_total:69632[0m
+
+[0;32mI (31313) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (31323) NimBLE: att_handle=16[0m
+
+[0;32mI (31623) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (31893) OTA_HELPER: recv: 4096, recv_total:73728[0m
+
+[0;32mI (31893) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (31903) NimBLE: att_handle=16[0m
+
+[0;32mI (32573) OTA_HELPER: recv: 4096, recv_total:77824[0m
+
+[0;32mI (32573) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (32583) NimBLE: att_handle=16[0m
+
+[0;32mI (32623) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (33313) OTA_HELPER: recv: 4096, recv_total:81920[0m
+
+[0;32mI (33313) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (33323) NimBLE: att_handle=16[0m
+
+[0;32mI (33623) HELLO WORLD: Restarting now.[0m
+[0;32mI (33623) HELLO WORLD: Hello World![0m
+[0;32mI (33623) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (33623) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (33623) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (33633) HELLO WORLD: Minimum free heap size: 245784 bytes[0m
+
+[0;32mI (33633) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (33913) OTA_HELPER: recv: 4096, recv_total:86016[0m
+
+[0;32mI (33913) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (33923) NimBLE: att_handle=16[0m
+
+[0;32mI (34623) OTA_HELPER: recv: 4096, recv_total:90112[0m
+
+[0;32mI (34623) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (34633) NimBLE: att_handle=16[0m
+
+[0;32mI (34643) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (35203) OTA_HELPER: recv: 4096, recv_total:94208[0m
+
+[0;32mI (35203) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (35213) NimBLE: att_handle=16[0m
+
+[0;32mI (35643) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (35903) OTA_HELPER: recv: 4096, recv_total:98304[0m
+
+[0;32mI (35903) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (35913) NimBLE: att_handle=16[0m
+
+[0;32mI (36643) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (36673) OTA_HELPER: recv: 4096, recv_total:102400[0m
+
+[0;32mI (36673) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (36683) NimBLE: att_handle=16[0m
+
+[0;32mI (37303) OTA_HELPER: recv: 4096, recv_total:106496[0m
+
+[0;32mI (37303) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (37313) NimBLE: att_handle=16[0m
+
+[0;32mI (37643) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (37903) OTA_HELPER: recv: 4096, recv_total:110592[0m
+
+[0;32mI (37903) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (37913) NimBLE: att_handle=16[0m
+
+[0;32mI (38483) OTA_HELPER: recv: 4096, recv_total:114688[0m
+
+[0;32mI (38483) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (38493) NimBLE: att_handle=16[0m
+
+[0;32mI (38643) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (39113) OTA_HELPER: recv: 4096, recv_total:118784[0m
+
+[0;32mI (39113) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (39123) NimBLE: att_handle=16[0m
+
+[0;32mI (39643) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (39793) OTA_HELPER: recv: 4096, recv_total:122880[0m
+
+[0;32mI (39793) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (39803) NimBLE: att_handle=16[0m
+
+[0;32mI (40393) OTA_HELPER: recv: 4096, recv_total:126976[0m
+
+[0;32mI (40393) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (40403) NimBLE: att_handle=16[0m
+
+[0;32mI (40643) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (41133) OTA_HELPER: recv: 4096, recv_total:131072[0m
+
+[0;32mI (41133) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (41143) NimBLE: att_handle=16[0m
+
+[0;32mI (41643) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (41783) OTA_HELPER: recv: 4096, recv_total:135168[0m
+
+[0;32mI (41783) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (41793) NimBLE: att_handle=16[0m
+
+[0;32mI (42393) OTA_HELPER: recv: 4096, recv_total:139264[0m
+
+[0;32mI (42393) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (42403) NimBLE: att_handle=16[0m
+
+[0;32mI (42643) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (43023) OTA_HELPER: recv: 4096, recv_total:143360[0m
+
+[0;32mI (43023) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (43033) NimBLE: att_handle=16[0m
+
+[0;32mI (43643) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (43673) OTA_HELPER: recv: 4096, recv_total:147456[0m
+
+[0;32mI (43673) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (43693) NimBLE: att_handle=16[0m
+
+[0;32mI (44383) OTA_HELPER: recv: 4096, recv_total:151552[0m
+
+[0;32mI (44383) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (44393) NimBLE: att_handle=16[0m
+
+[0;32mI (44643) HELLO WORLD: Restarting now.[0m
+[0;32mI (44643) HELLO WORLD: Hello World![0m
+[0;32mI (44643) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (44643) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (44643) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (44653) HELLO WORLD: Minimum free heap size: 245784 bytes[0m
+
+[0;32mI (44653) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (45043) OTA_HELPER: recv: 4096, recv_total:155648[0m
+
+[0;32mI (45043) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (45053) NimBLE: att_handle=16[0m
+
+[0;32mI (45663) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (45723) OTA_HELPER: recv: 4096, recv_total:159744[0m
+
+[0;32mI (45723) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (45733) NimBLE: att_handle=16[0m
+
+[0;32mI (46543) OTA_HELPER: recv: 4096, recv_total:163840[0m
+
+[0;32mI (46543) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (46553) NimBLE: att_handle=16[0m
+
+[0;32mI (46663) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (47433) OTA_HELPER: recv: 4096, recv_total:167936[0m
+
+[0;32mI (47433) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (47443) NimBLE: att_handle=16[0m
+
+[0;32mI (47663) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (48113) OTA_HELPER: recv: 4096, recv_total:172032[0m
+
+[0;32mI (48113) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (48123) NimBLE: att_handle=16[0m
+
+[0;32mI (48663) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (48663) OTA_HELPER: recv: 4096, recv_total:176128[0m
+
+[0;32mI (48663) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (48673) NimBLE: att_handle=16[0m
+
+[0;32mI (49273) OTA_HELPER: recv: 4096, recv_total:180224[0m
+
+[0;32mI (49273) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (49283) NimBLE: att_handle=16[0m
+
+[0;32mI (49663) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (49843) OTA_HELPER: recv: 4096, recv_total:184320[0m
+
+[0;32mI (49843) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (49853) NimBLE: att_handle=16[0m
+
+[0;32mI (50373) OTA_HELPER: recv: 4096, recv_total:188416[0m
+
+[0;32mI (50373) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (50383) NimBLE: att_handle=16[0m
+
+[0;32mI (50663) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (50973) OTA_HELPER: recv: 4096, recv_total:192512[0m
+
+[0;32mI (50973) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (50983) NimBLE: att_handle=16[0m
+
+[0;32mI (51583) OTA_HELPER: recv: 4096, recv_total:196608[0m
+
+[0;32mI (51583) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (51593) NimBLE: att_handle=16[0m
+
+[0;32mI (51663) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (52103) OTA_HELPER: recv: 4096, recv_total:200704[0m
+
+[0;32mI (52103) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (52113) NimBLE: att_handle=16[0m
+
+[0;32mI (52663) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (52683) OTA_HELPER: recv: 4096, recv_total:204800[0m
+
+[0;32mI (52683) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (52693) NimBLE: att_handle=16[0m
+
+[0;32mI (53263) OTA_HELPER: recv: 4096, recv_total:208896[0m
+
+[0;32mI (53263) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53273) NimBLE: att_handle=16[0m
+
+[0;32mI (53663) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (53893) OTA_HELPER: recv: 4096, recv_total:212992[0m
+
+[0;32mI (53893) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53903) NimBLE: att_handle=16[0m
+
+[0;32mI (54463) OTA_HELPER: recv: 4096, recv_total:217088[0m
+
+[0;32mI (54463) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (54473) NimBLE: att_handle=16[0m
+
+[0;32mI (54663) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (54993) OTA_HELPER: recv: 4096, recv_total:221184[0m
+
+[0;32mI (54993) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (55003) NimBLE: att_handle=16[0m
+
+[0;32mI (55513) OTA_HELPER: recv: 4096, recv_total:225280[0m
+
+[0;32mI (55513) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (55523) NimBLE: att_handle=16[0m
+
+[0;32mI (55663) HELLO WORLD: Restarting now.[0m
+[0;32mI (55663) HELLO WORLD: Hello World![0m
+[0;32mI (55663) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (55663) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (55663) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (55673) HELLO WORLD: Minimum free heap size: 245784 bytes[0m
+
+[0;32mI (55673) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (56093) OTA_HELPER: recv: 4096, recv_total:229376[0m
+
+[0;32mI (56093) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (56103) NimBLE: att_handle=16[0m
+
+[0;32mI (56623) OTA_HELPER: recv: 4096, recv_total:233472[0m
+
+[0;32mI (56623) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (56633) NimBLE: att_handle=16[0m
+
+[0;32mI (56683) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (57143) OTA_HELPER: recv: 4096, recv_total:237568[0m
+
+[0;32mI (57143) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (57153) NimBLE: att_handle=16[0m
+
+[0;32mI (57683) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (57753) OTA_HELPER: recv: 4096, recv_total:241664[0m
+
+[0;32mI (57753) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (57763) NimBLE: att_handle=16[0m
+
+[0;32mI (58303) OTA_HELPER: recv: 4096, recv_total:245760[0m
+
+[0;32mI (58303) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (58313) NimBLE: att_handle=16[0m
+
+[0;32mI (58683) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (58823) OTA_HELPER: recv: 4096, recv_total:249856[0m
+
+[0;32mI (58823) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (58833) NimBLE: att_handle=16[0m
+
+[0;32mI (59453) OTA_HELPER: recv: 4096, recv_total:253952[0m
+
+[0;32mI (59453) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (59463) NimBLE: att_handle=16[0m
+
+[0;32mI (59683) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (59983) OTA_HELPER: recv: 4096, recv_total:258048[0m
+
+[0;32mI (59983) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (59993) NimBLE: att_handle=16[0m
+
+[0;32mI (60503) OTA_HELPER: recv: 4096, recv_total:262144[0m
+
+[0;32mI (60503) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60513) NimBLE: att_handle=16[0m
+
+[0;32mI (60683) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (61053) OTA_HELPER: recv: 4096, recv_total:266240[0m
+
+[0;32mI (61053) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (61063) NimBLE: att_handle=16[0m
+
+[0;32mI (61683) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (61713) OTA_HELPER: recv: 4096, recv_total:270336[0m
+
+[0;32mI (61713) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (61723) NimBLE: att_handle=16[0m
+
+[0;32mI (62343) OTA_HELPER: recv: 4096, recv_total:274432[0m
+
+[0;32mI (62343) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (62353) NimBLE: att_handle=16[0m
+
+[0;32mI (62683) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (62923) OTA_HELPER: recv: 4096, recv_total:278528[0m
+
+[0;32mI (62923) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (62933) NimBLE: att_handle=16[0m
+
+[0;32mI (63573) OTA_HELPER: recv: 4096, recv_total:282624[0m
+
+[0;32mI (63573) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (63583) NimBLE: att_handle=16[0m
+
+[0;32mI (63683) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (64123) OTA_HELPER: recv: 4096, recv_total:286720[0m
+
+[0;32mI (64123) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64133) NimBLE: att_handle=16[0m
+
+[0;32mI (64653) OTA_HELPER: recv: 4096, recv_total:290816[0m
+
+[0;32mI (64653) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64663) NimBLE: att_handle=16[0m
+
+[0;32mI (64683) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (65283) OTA_HELPER: recv: 4096, recv_total:294912[0m
+
+[0;32mI (65283) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (65293) NimBLE: att_handle=16[0m
+
+[0;32mI (65683) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (65863) OTA_HELPER: recv: 4096, recv_total:299008[0m
+
+[0;32mI (65863) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (65873) NimBLE: att_handle=16[0m
+
+[0;32mI (66513) OTA_HELPER: recv: 4096, recv_total:303104[0m
+
+[0;32mI (66513) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66523) NimBLE: att_handle=16[0m
+
+[0;32mI (66683) HELLO WORLD: Restarting now.[0m
+[0;32mI (66683) HELLO WORLD: Hello World![0m
+[0;32mI (66683) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (66683) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (66683) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (66693) HELLO WORLD: Minimum free heap size: 245784 bytes[0m
+
+[0;32mI (66693) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (67123) OTA_HELPER: recv: 4096, recv_total:307200[0m
+
+[0;32mI (67123) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (67133) NimBLE: att_handle=16[0m
+
+[0;32mI (67643) OTA_HELPER: recv: 4096, recv_total:311296[0m
+
+[0;32mI (67643) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (67653) NimBLE: att_handle=16[0m
+
+[0;32mI (67703) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (68173) OTA_HELPER: recv: 4096, recv_total:315392[0m
+
+[0;32mI (68173) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (68183) NimBLE: att_handle=16[0m
+
+[0;32mI (68703) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (68743) OTA_HELPER: recv: 4096, recv_total:319488[0m
+
+[0;32mI (68743) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (68763) NimBLE: att_handle=16[0m
+
+[0;32mI (69483) OTA_HELPER: recv: 4096, recv_total:323584[0m
+
+[0;32mI (69483) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (69493) NimBLE: att_handle=16[0m
+
+[0;32mI (69703) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (70403) OTA_HELPER: recv: 4096, recv_total:327680[0m
+
+[0;32mI (70403) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (70413) NimBLE: att_handle=16[0m
+
+[0;32mI (70703) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (70983) OTA_HELPER: recv: 4096, recv_total:331776[0m
+
+[0;32mI (70983) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (70993) NimBLE: att_handle=16[0m
+
+[0;32mI (71583) OTA_HELPER: recv: 4096, recv_total:335872[0m
+
+[0;32mI (71583) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (71593) NimBLE: att_handle=16[0m
+
+[0;32mI (71703) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (72103) OTA_HELPER: recv: 4096, recv_total:339968[0m
+
+[0;32mI (72103) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (72113) NimBLE: att_handle=16[0m
+
+[0;32mI (72633) OTA_HELPER: recv: 4096, recv_total:344064[0m
+
+[0;32mI (72633) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (72643) NimBLE: att_handle=16[0m
+
+[0;32mI (72703) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (73213) OTA_HELPER: recv: 4096, recv_total:348160[0m
+
+[0;32mI (73213) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73223) NimBLE: att_handle=16[0m
+
+[0;32mI (73703) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (73783) OTA_HELPER: recv: 4096, recv_total:352256[0m
+
+[0;32mI (73783) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73793) NimBLE: att_handle=16[0m
+
+[0;32mI (74363) OTA_HELPER: recv: 4096, recv_total:356352[0m
+
+[0;32mI (74363) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (74373) NimBLE: att_handle=16[0m
+
+[0;32mI (74703) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (74893) OTA_HELPER: recv: 4096, recv_total:360448[0m
+
+[0;32mI (74893) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (74903) NimBLE: att_handle=16[0m
+
+[0;32mI (75413) OTA_HELPER: recv: 4096, recv_total:364544[0m
+
+[0;32mI (75413) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75423) NimBLE: att_handle=16[0m
+
+[0;32mI (75703) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (75993) OTA_HELPER: recv: 4096, recv_total:368640[0m
+
+[0;32mI (75993) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (76003) NimBLE: att_handle=16[0m
+
+[0;32mI (76523) OTA_HELPER: recv: 4096, recv_total:372736[0m
+
+[0;32mI (76523) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (76533) NimBLE: att_handle=16[0m
+
+[0;32mI (76703) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (77043) OTA_HELPER: recv: 4096, recv_total:376832[0m
+
+[0;32mI (77043) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77053) NimBLE: att_handle=16[0m
+
+[0;32mI (77643) OTA_HELPER: recv: 4096, recv_total:380928[0m
+
+[0;32mI (77643) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77653) NimBLE: att_handle=16[0m
+
+[0;32mI (77703) HELLO WORLD: Restarting now.[0m
+[0;32mI (77703) HELLO WORLD: Hello World![0m
+[0;32mI (77703) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (77703) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (77703) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (77713) HELLO WORLD: Minimum free heap size: 245784 bytes[0m
+
+[0;32mI (77713) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (78253) OTA_HELPER: recv: 4096, recv_total:385024[0m
+
+[0;32mI (78253) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (78263) NimBLE: att_handle=16[0m
+
+[0;32mI (78723) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (78883) OTA_HELPER: recv: 4096, recv_total:389120[0m
+
+[0;32mI (78883) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (78893) NimBLE: att_handle=16[0m
+
+[0;32mI (79463) OTA_HELPER: recv: 4096, recv_total:393216[0m
+
+[0;32mI (79463) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (79463) NimBLE: att_handle=16[0m
+
+[0;32mI (79723) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (80033) OTA_HELPER: recv: 4096, recv_total:397312[0m
+
+[0;32mI (80033) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (80043) NimBLE: att_handle=16[0m
+
+[0;32mI (80583) OTA_HELPER: recv: 4096, recv_total:401408[0m
+
+[0;32mI (80583) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (80593) NimBLE: att_handle=16[0m
+
+[0;32mI (80723) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (81083) OTA_HELPER: recv: 4096, recv_total:405504[0m
+
+[0;32mI (81083) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (81093) NimBLE: att_handle=16[0m
+
+[0;32mI (81613) OTA_HELPER: recv: 4096, recv_total:409600[0m
+
+[0;32mI (81613) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (81623) NimBLE: att_handle=16[0m
+
+[0;32mI (81723) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (82193) OTA_HELPER: recv: 4096, recv_total:413696[0m
+
+[0;32mI (82193) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (82193) NimBLE: att_handle=16[0m
+
+[0;32mI (82723) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (82743) OTA_HELPER: recv: 4096, recv_total:417792[0m
+
+[0;32mI (82743) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (82753) NimBLE: att_handle=16[0m
+
+[0;32mI (83343) OTA_HELPER: recv: 4096, recv_total:421888[0m
+
+[0;32mI (83343) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (83353) NimBLE: att_handle=16[0m
+
+[0;32mI (83723) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (83943) OTA_HELPER: recv: 4096, recv_total:425984[0m
+
+[0;32mI (83943) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (83953) NimBLE: att_handle=16[0m
+
+[0;32mI (84553) OTA_HELPER: recv: 4096, recv_total:430080[0m
+
+[0;32mI (84553) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (84563) NimBLE: att_handle=16[0m
+
+[0;32mI (84723) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (85133) OTA_HELPER: recv: 4096, recv_total:434176[0m
+
+[0;32mI (85133) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (85143) NimBLE: att_handle=16[0m
+
+[0;32mI (85703) OTA_HELPER: recv: 4096, recv_total:438272[0m
+
+[0;32mI (85703) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (85713) NimBLE: att_handle=16[0m
+
+[0;32mI (85723) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (86283) OTA_HELPER: recv: 4096, recv_total:442368[0m
+
+[0;32mI (86283) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (86293) NimBLE: att_handle=16[0m
+
+[0;32mI (86723) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (86813) OTA_HELPER: recv: 4096, recv_total:446464[0m
+
+[0;32mI (86813) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (86823) NimBLE: att_handle=16[0m
+
+[0;32mI (87333) OTA_HELPER: recv: 4096, recv_total:450560[0m
+
+[0;32mI (87333) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (87343) NimBLE: att_handle=16[0m
+
+[0;32mI (87723) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (87913) OTA_HELPER: recv: 4096, recv_total:454656[0m
+
+[0;32mI (87913) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (87923) NimBLE: att_handle=16[0m
+
+[0;32mI (88543) OTA_HELPER: recv: 4096, recv_total:458752[0m
+
+[0;32mI (88543) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (88553) NimBLE: att_handle=16[0m
+
+[0;32mI (88723) HELLO WORLD: Restarting now.[0m
+[0;32mI (88723) HELLO WORLD: Hello World![0m
+[0;32mI (88723) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (88723) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (88723) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (88733) HELLO WORLD: Minimum free heap size: 245784 bytes[0m
+
+[0;32mI (88733) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (89093) OTA_HELPER: recv: 4096, recv_total:462848[0m
+
+[0;32mI (89093) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (89103) NimBLE: att_handle=16[0m
+
+[0;32mI (89693) OTA_HELPER: recv: 4096, recv_total:466944[0m
+
+[0;32mI (89693) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (89703) NimBLE: att_handle=16[0m
+
+[0;32mI (89743) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (90243) OTA_HELPER: recv: 4096, recv_total:471040[0m
+
+[0;32mI (90243) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (90263) NimBLE: att_handle=16[0m
+
+[0;32mI (90743) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (90873) OTA_HELPER: recv: 4096, recv_total:475136[0m
+
+[0;32mI (90873) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (90883) NimBLE: att_handle=16[0m
+
+[0;32mI (91533) OTA_HELPER: recv: 4096, recv_total:479232[0m
+
+[0;32mI (91533) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (91543) NimBLE: att_handle=16[0m
+
+[0;32mI (91743) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (92213) OTA_HELPER: recv: 4096, recv_total:483328[0m
+
+[0;32mI (92213) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (92223) NimBLE: att_handle=16[0m
+
+[0;32mI (92743) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (92973) OTA_HELPER: recv: 4096, recv_total:487424[0m
+
+[0;32mI (92973) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (92983) NimBLE: att_handle=16[0m
+
+[0;32mI (93633) OTA_HELPER: recv: 4096, recv_total:491520[0m
+
+[0;32mI (93633) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (93643) NimBLE: att_handle=16[0m
+
+[0;32mI (93743) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (94213) OTA_HELPER: recv: 4096, recv_total:495616[0m
+
+[0;32mI (94213) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (94223) NimBLE: att_handle=16[0m
+
+[0;32mI (94743) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (94763) OTA_HELPER: recv: 4096, recv_total:499712[0m
+
+[0;32mI (94763) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (94773) NimBLE: att_handle=16[0m
+
+[0;32mI (95313) OTA_HELPER: recv: 4096, recv_total:503808[0m
+
+[0;32mI (95313) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (95323) NimBLE: att_handle=16[0m
+
+[0;32mI (95743) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (95943) OTA_HELPER: recv: 4096, recv_total:507904[0m
+
+[0;32mI (95943) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (95953) NimBLE: att_handle=16[0m
+
+[0;32mI (96523) OTA_HELPER: recv: 4096, recv_total:512000[0m
+
+[0;32mI (96523) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (96533) NimBLE: att_handle=16[0m
+
+[0;32mI (96743) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (97073) OTA_HELPER: recv: 4096, recv_total:516096[0m
+
+[0;32mI (97073) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (97083) NimBLE: att_handle=16[0m
+
+[0;32mI (97573) OTA_HELPER: recv: 4096, recv_total:520192[0m
+
+[0;32mI (97573) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (97583) NimBLE: att_handle=16[0m
+
+[0;32mI (97743) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (98093) OTA_HELPER: recv: 4096, recv_total:524288[0m
+
+[0;32mI (98093) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (98103) NimBLE: att_handle=16[0m
+
+[0;32mI (98673) OTA_HELPER: recv: 4096, recv_total:528384[0m
+
+[0;32mI (98673) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (98683) NimBLE: att_handle=16[0m
+
+[0;32mI (98743) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (99253) OTA_HELPER: recv: 4096, recv_total:532480[0m
+
+[0;32mI (99253) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (99263) NimBLE: att_handle=16[0m
+
+[0;32mI (99743) HELLO WORLD: Restarting now.[0m
+[0;32mI (99743) HELLO WORLD: Hello World![0m
+[0;32mI (99743) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (99743) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (99743) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (99753) HELLO WORLD: Minimum free heap size: 245784 bytes[0m
+
+[0;32mI (99753) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (99833) OTA_HELPER: recv: 4096, recv_total:536576[0m
+
+[0;32mI (99833) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (99843) NimBLE: att_handle=16[0m
+
+[0;32mI (100383) OTA_HELPER: recv: 4096, recv_total:540672[0m
+
+[0;32mI (100383) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (100393) NimBLE: att_handle=16[0m
+
+[0;32mI (100763) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (100983) OTA_HELPER: recv: 4096, recv_total:544768[0m
+
+[0;32mI (100983) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (100993) NimBLE: att_handle=16[0m
+
+[0;32mI (101513) OTA_HELPER: recv: 4096, recv_total:548864[0m
+
+[0;32mI (101513) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (101523) NimBLE: att_handle=16[0m
+
+[0;32mI (101763) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (102033) OTA_HELPER: recv: 4096, recv_total:552960[0m
+
+[0;32mI (102033) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (102043) NimBLE: att_handle=16[0m
+
+[0;32mI (102663) OTA_HELPER: recv: 4096, recv_total:557056[0m
+
+[0;32mI (102663) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (102673) NimBLE: att_handle=16[0m
+
+[0;32mI (102763) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (103243) OTA_HELPER: recv: 4096, recv_total:561152[0m
+
+[0;32mI (103243) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (103253) NimBLE: att_handle=16[0m
+
+[0;32mI (103763) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (103823) OTA_HELPER: recv: 4096, recv_total:565248[0m
+
+[0;32mI (103823) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (103833) NimBLE: att_handle=16[0m
+
+[0;32mI (104083) OTA_HELPER: recv: 1874, recv_total:567122[0m
+
+[0;32mI (104083) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (104093) NimBLE: att_handle=16[0m
+
+[0;32mI (104093) esp_image: segment 0: paddr=00810020 vaddr=3c060020 size=1750ch ( 95500) map[0m
+[0;32mI (104103) esp_image: segment 1: paddr=00827534 vaddr=3fc9ba00 size=04294h ( 17044) [0m
+[0;32mI (104113) esp_image: segment 2: paddr=0082b7d0 vaddr=40374000 size=04848h ( 18504) [0m
+[0;32mI (104113) esp_image: segment 3: paddr=00830020 vaddr=42000020 size=57620h (357920) map[0m
+
+CMD_CHAR -> 0 : 2, 1 : 0I (104133) NimBLE: GATT procedure initiated: notify; 
+[0;32mI (104133) NimBLE: att_handle=22[0m
+
+[0;32mI (104163) esp_image: segment 4: paddr=00887648 vaddr=40378848 size=130b0h ( 78000) [0m
+[0;32mI (104173) esp_image: segment 5: paddr=0089a700 vaddr=600fe000 size=00020h (    32) [0m
+[0;32mI (104173) esp_image: segment 0: paddr=00810020 vaddr=3c060020 size=1750ch ( 95500) map[0m
+[0;32mI (104183) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 4[0m
+[0;32mI (104193) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=8 reason=2 prevn=0 curn=0 previ=1 curi=0[0m
+
+[0;32mI (104193) esp_image: segment 1: paddr=00827534 vaddr=3fc9ba00 size=04294h ( 17044) [0m
+[0;32mI (104193) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 0[0m
+[0;32mI (104203) esp_image: segment 2: paddr=0082b7d0 vaddr=40374000 size=04848h ( 18504) [0m
+[0;32mI (104203) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=16 reason=2 prevn=0 curn=0 previ=1 curi=0[0m
+
+[0;32mI (104213) esp_image: segment 3: paddr=00830020 vaddr=42000020 size=57620h (357920) map[0m
+[0;32mI (104223) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 1[0m
+[0;32mI (104243) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=19 reason=2 prevn=0 curn=0 previ=1 curi=0[0m
+
+[0;32mI (104253) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 2[0m
+[0;32mI (104253) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=22 reason=2 prevn=0 curn=0 previ=1 curi=0[0m
+
+[0;32mI (104263) NimBLE_BLE_OTA: disconnect; reason=531 [0m
+[0;32mI (104273) NimBLE_BLE_OTA: handle=1 our_ota_addr_type=0 our_ota_addr=[0m
+[0;32mI (104273) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (104283) NimBLE_BLE_OTA:  our_id_addr_type=0 our_id_addr=[0m
+[0;32mI (104283) esp_image: segment 4: paddr=00887648 vaddr=40378848 size=130b0h ( 78000) [0m
+[0;32mI (104283) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (104293) NimBLE_BLE_OTA:  peer_ota_addr_type=1 peer_ota_addr=[0m
+[0;32mI (104303) NimBLE_BLE_OTA: 7a:e2:ac:b1:de:63[0m
+[0;32mI (104303) esp_image: segment 5: paddr=0089a700 vaddr=600fe000 size=00020h (    32) [0m
+[0;32mI (104303) NimBLE_BLE_OTA:  peer_id_addr_type=1 peer_id_addr=[0m
+[0;32mI (104323) NimBLE_BLE_OTA: 7a:e2:ac:b1:de:63[0m
+[0;32mI (104323) NimBLE_BLE_OTA:  conn_itvl=21 conn_latency=0 supervision_timeout=72 encrypted=0 authenticated=0 bonded=0[0m
+
+[0;32mI (104353) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (104353) NimBLE: disc_mode=2[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xb (SPI_FAST_FLASH_BOOT)
+Saved PC:0x420074ab
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1598
+load:0x403c8700,len:0xd20
+load:0x403cb700,len:0x2f9c
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v6.0-dev-940-g76cec451ce 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jul  9 2025 14:02:32[0m
+[0;32mI (24) boot: Multicore bootloader[0m
+[0;32mI (26) boot: chip revision: v0.2[0m
+[0;32mI (29) boot: efuse block revision: v1.3[0m
+[0;32mI (32) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (36) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (70) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (77) boot:  3 ota_0            OTA app          00 10 00020000 007f0000[0m
+[0;32mI (83) boot:  4 ota_1            OTA app          00 11 00810000 007f0000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (130) esp_image: segment 0: paddr=00810020 vaddr=3c060020 size=1750ch ( 95500) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=00827534 vaddr=3fc9ba00 size=04294h ( 17044) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0082b7d0 vaddr=40374000 size=04848h ( 18504) load[0m
+[0;32mI (156) esp_image: segment 3: paddr=00830020 vaddr=42000020 size=57620h (357920) map[0m
+[0;32mI (222) esp_image: segment 4: paddr=00887648 vaddr=40378848 size=130b0h ( 78000) load[0m
+[0;32mI (240) esp_image: segment 5: paddr=0089a700 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (250) boot: Loaded app from partition at offset 0x810000[0m
+[0;32mI (250) boot: Disabling RNG early entropy source...[0m
+[0;32mI (260) cpu_start: Multicore app[0m
+[0;32mI (269) cpu_start: Pro cpu start user code[0m
+[0;32mI (270) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (270) app_init: Application information:[0m
+[0;32mI (270) app_init: Project name:     ble_ota_blink[0m
+[0;32mI (274) app_init: App version:      1[0m
+[0;32mI (277) app_init: Compile time:     Jul  9 2025 15:20:33[0m
+[0;32mI (282) app_init: ELF file SHA256:  f5a33a129...[0m
+[0;32mI (287) app_init: ESP-IDF:          v6.0-dev-940-g76cec451ce[0m
+[0;32mI (292) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (296) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (300) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (304) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (310) heap_init: At 3FCA21D0 len 00047540 (285 KiB): RAM[0m
+[0;32mI (315) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (320) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (326) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (332) spi_flash: detected chip: gd[0m
+[0;32mI (334) spi_flash: flash io: dio[0m
+[0;32mI (337) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (344) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (350) coexist: coex firmware version: 831ec70[0m
+[0;32mI (354) coexist: coexist rom version e7ae62f[0m
+[0;32mI (359) main_task: Started on CPU0[0m
+[0;32mI (369) main_task: Calling app_main()[0m
+[0;32mI (369) APP_MAIN: Initializing nvs flash[0m
+[0;32mI (379) APP_MAIN: Initializing BLE OTA & Hello World & Blink task[0m
+[0;32mI (379) BLE_INIT: BT controller compile version [4713a69][0m
+[0;32mI (379) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (389) BLE_INIT: Bluetooth MAC: 24:58:7c:de:8c:9e[0m
+[0;32mI (389) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (439) NimBLE_BLE_OTA: BLE Host Task Started[0m
+[0;32mI (439) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (439) NimBLE_BLE_OTA: Device Address: [0m
+[0;32mI (439) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (439) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (449) NimBLE: disc_mode=2[0m
+[0;32mI (449) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (459) NimBLE: [0m
+
+[0;32mI (459) LED_BLINK: Initializing Blink GPIO LED[0m
+[0;32mI (469) LED_BLINK: Starting Blink Task[0m
+[0;32mI (469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (469) HELLO WORLD: Hello World![0m
+[0;32mI (469) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (479) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (479) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (489) HELLO WORLD: Minimum free heap size: 248328 bytes[0m
+
+[0;32mI (489) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (499) APP_MAIN: System initialization complete[0m
+[0;32mI (1469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (1499) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (2469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (2499) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (3469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (3499) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (4469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (4499) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (5469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (5499) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (6469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (6499) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (7469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (7499) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (8469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (8499) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (9469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (9499) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (10469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (10499) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (11469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (11499) HELLO WORLD: Restarting now.[0m
+[0;32mI (11499) HELLO WORLD: Hello World![0m
+[0;32mI (11499) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (11499) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (11499) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (11509) HELLO WORLD: Minimum free heap size: 248328 bytes[0m
+
+[0;32mI (11509) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (12469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (12519) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (13469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (13519) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (14469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (14519) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (15469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (15519) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (16469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (16519) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (17469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (17519) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (18469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (18519) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (19469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (19519) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (20469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (20519) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (21469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (21519) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (22469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (22519) HELLO WORLD: Restarting now.[0m
+[0;32mI (22519) HELLO WORLD: Hello World![0m
+[0;32mI (22519) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (22519) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (22519) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (22529) HELLO WORLD: Minimum free heap size: 248328 bytes[0m
+
+[0;32mI (22529) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (23469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (23539) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (24469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (24539) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (25469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (25539) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (26469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (26539) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (27469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (27539) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (28469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (28539) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (29469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (29539) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (30469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (30539) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (31469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (31539) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (32469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (32539) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (33469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (33539) HELLO WORLD: Restarting now.[0m
+[0;32mI (33539) HELLO WORLD: Hello World![0m
+[0;32mI (33539) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (33539) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (33539) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (33549) HELLO WORLD: Minimum free heap size: 248328 bytes[0m
+
+[0;32mI (33549) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (34469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (34559) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (35169) NimBLE_BLE_OTA: connection established; status=0 [0m
+[0;32mI (35169) NimBLE_BLE_OTA: handle=1 our_ota_addr_type=0 our_ota_addr=[0m
+[0;32mI (35169) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (35179) NimBLE_BLE_OTA:  our_id_addr_type=0 our_id_addr=[0m
+[0;32mI (35179) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (35189) NimBLE_BLE_OTA:  peer_ota_addr_type=1 peer_ota_addr=[0m
+[0;32mI (35189) NimBLE_BLE_OTA: 7a:e2:ac:b1:de:63[0m
+[0;32mI (35199) NimBLE_BLE_OTA:  peer_id_addr_type=1 peer_id_addr=[0m
+[0;32mI (35199) NimBLE_BLE_OTA: 7a:e2:ac:b1:de:63[0m
+[0;32mI (35209) NimBLE_BLE_OTA:  conn_itvl=21 conn_latency=0 supervision_timeout=72 encrypted=0 authenticated=0 bonded=0[0m
+
+[0;32mI (35439) NimBLE_BLE_OTA: mtu update event; conn_handle=1 cid=4 mtu=517[0m
+
+[0;32mI (35469) LED_BLINK: Turning the LED ON![0m
+[0;32mI (35559) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (35649) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 4[0m
+[0;32mI (35649) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=8 reason=1 prevn=0 curn=0 previ=0 curi=1[0m
+
+[0;32mI (35879) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 0[0m
+[0;32mI (35879) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=16 reason=1 prevn=0 curn=0 previ=0 curi=1[0m
+
+[0;32mI (35989) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 1[0m
+[0;32mI (35989) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=19 reason=1 prevn=0 curn=0 previ=0 curi=1[0m
+
+[0;32mI (36119) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 2[0m
+[0;32mI (36119) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=22 reason=1 prevn=0 curn=0 previ=0 curi=1[0m
+
+[0;32mI (36169) NimBLE_BLE_OTA: recv ota start cmd, fw_length = 543664[0m
+[0;32mI (36169) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (36169) NimBLE: att_handle=22[0m
+
+[0;32mI (36469) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (36559) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (36719) OTA_HELPER: ota_task start[0m
+[0;32mI (36719) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (36719) NimBLE: att_handle=16[0m
+
+[0;32mI (36769) OTA_HELPER: Marked running image as valid[0m
+[0;32mI (37569) LED_BLINK: Turning the LED ON![0m
+[0;32mI (37569) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (38209) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (38209) NimBLE: att_handle=16[0m
+
+[0;32mI (38669) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (38669) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (39729) LED_BLINK: Turning the LED ON![0m
+[0;32mI (39729) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (40749) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (40749) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (41769) LED_BLINK: Turning the LED ON![0m
+[0;32mI (41769) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (42829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (42829) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (43829) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (43829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (43989) OTA_HELPER: wait for data from ringbuf! fw_len = 543664[0m
+[0;32mI (43989) OTA_HELPER: recv: 8192, recv_total:8192[0m
+
+[0;32mI (44019) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (44019) NimBLE: att_handle=16[0m
+
+[0;32mI (44019) OTA_HELPER: recv: 4096, recv_total:12288[0m
+
+[0;32mI (44569) OTA_HELPER: recv: 4096, recv_total:16384[0m
+
+[0;32mI (44569) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (44579) NimBLE: att_handle=16[0m
+
+[0;32mI (44829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (44829) HELLO WORLD: Restarting now.[0m
+[0;32mI (44829) HELLO WORLD: Hello World![0m
+[0;32mI (44829) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (44829) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (44839) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (44839) HELLO WORLD: Minimum free heap size: 235332 bytes[0m
+
+[0;32mI (44839) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (45119) OTA_HELPER: recv: 4096, recv_total:20480[0m
+
+[0;32mI (45119) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (45129) NimBLE: att_handle=16[0m
+
+[0;32mI (45729) OTA_HELPER: recv: 4096, recv_total:24576[0m
+
+[0;32mI (45729) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (45739) NimBLE: att_handle=16[0m
+
+[0;32mI (45829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (45849) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (46219) OTA_HELPER: recv: 4096, recv_total:28672[0m
+
+[0;32mI (46229) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (46239) NimBLE: att_handle=16[0m
+
+[0;32mI (46799) OTA_HELPER: recv: 4096, recv_total:32768[0m
+
+[0;32mI (46799) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (46809) NimBLE: att_handle=16[0m
+
+[0;32mI (46829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (46849) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (47429) OTA_HELPER: recv: 4096, recv_total:36864[0m
+
+[0;32mI (47429) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (47439) NimBLE: att_handle=16[0m
+
+[0;32mI (47829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (47849) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (47929) OTA_HELPER: recv: 4096, recv_total:40960[0m
+
+[0;32mI (47929) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (47939) NimBLE: att_handle=16[0m
+
+[0;32mI (48539) OTA_HELPER: recv: 4096, recv_total:45056[0m
+
+[0;32mI (48539) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (48549) NimBLE: att_handle=16[0m
+
+[0;32mI (48829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (48849) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (49059) OTA_HELPER: recv: 4096, recv_total:49152[0m
+
+[0;32mI (49059) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (49069) NimBLE: att_handle=16[0m
+
+[0;32mI (49689) OTA_HELPER: recv: 4096, recv_total:53248[0m
+
+[0;32mI (49689) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (49699) NimBLE: att_handle=16[0m
+
+[0;32mI (49829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (49849) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (50219) OTA_HELPER: recv: 4096, recv_total:57344[0m
+
+[0;32mI (50219) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (50229) NimBLE: att_handle=16[0m
+
+[0;32mI (50789) OTA_HELPER: recv: 4096, recv_total:61440[0m
+
+[0;32mI (50789) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (50799) NimBLE: att_handle=16[0m
+
+[0;32mI (50829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (50849) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (51369) OTA_HELPER: recv: 4096, recv_total:65536[0m
+
+[0;32mI (51369) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (51379) NimBLE: att_handle=16[0m
+
+[0;32mI (51829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (51849) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (51949) OTA_HELPER: recv: 4096, recv_total:69632[0m
+
+[0;32mI (51949) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (51959) NimBLE: att_handle=16[0m
+
+[0;32mI (52549) OTA_HELPER: recv: 4096, recv_total:73728[0m
+
+[0;32mI (52549) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (52559) NimBLE: att_handle=16[0m
+
+[0;32mI (52829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (52849) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (53129) OTA_HELPER: recv: 4096, recv_total:77824[0m
+
+[0;32mI (53129) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53139) NimBLE: att_handle=16[0m
+
+[0;32mI (53759) OTA_HELPER: recv: 4096, recv_total:81920[0m
+
+[0;32mI (53759) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53769) NimBLE: att_handle=16[0m
+
+[0;32mI (53829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (53849) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (54309) OTA_HELPER: recv: 4096, recv_total:86016[0m
+
+[0;32mI (54309) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (54319) NimBLE: att_handle=16[0m
+
+[0;32mI (54829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (54839) OTA_HELPER: recv: 4096, recv_total:90112[0m
+
+[0;32mI (54839) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (54849) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (54849) NimBLE: att_handle=16[0m
+
+[0;32mI (55359) OTA_HELPER: recv: 4096, recv_total:94208[0m
+
+[0;32mI (55359) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (55369) NimBLE: att_handle=16[0m
+
+[0;32mI (55829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (55849) HELLO WORLD: Restarting now.[0m
+[0;32mI (55849) HELLO WORLD: Hello World![0m
+[0;32mI (55849) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (55849) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (55849) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (55859) HELLO WORLD: Minimum free heap size: 235332 bytes[0m
+
+[0;32mI (55859) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (56099) OTA_HELPER: recv: 4096, recv_total:98304[0m
+
+[0;32mI (56099) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (56109) NimBLE: att_handle=16[0m
+
+[0;32mI (56829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (56869) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (56939) OTA_HELPER: recv: 4096, recv_total:102400[0m
+
+[0;32mI (56939) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (56949) NimBLE: att_handle=16[0m
+
+[0;32mI (57619) OTA_HELPER: recv: 4096, recv_total:106496[0m
+
+[0;32mI (57619) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (57629) NimBLE: att_handle=16[0m
+
+[0;32mI (57829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (57869) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (58139) OTA_HELPER: recv: 4096, recv_total:110592[0m
+
+[0;32mI (58139) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (58149) NimBLE: att_handle=16[0m
+
+[0;32mI (58669) OTA_HELPER: recv: 4096, recv_total:114688[0m
+
+[0;32mI (58669) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (58679) NimBLE: att_handle=16[0m
+
+[0;32mI (58829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (58869) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (59249) OTA_HELPER: recv: 4096, recv_total:118784[0m
+
+[0;32mI (59249) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (59259) NimBLE: att_handle=16[0m
+
+[0;32mI (59829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (59869) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (59879) OTA_HELPER: recv: 4096, recv_total:122880[0m
+
+[0;32mI (59879) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (59889) NimBLE: att_handle=16[0m
+
+[0;32mI (60449) OTA_HELPER: recv: 4096, recv_total:126976[0m
+
+[0;32mI (60449) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60459) NimBLE: att_handle=16[0m
+
+[0;32mI (60829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (60869) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (61079) OTA_HELPER: recv: 4096, recv_total:131072[0m
+
+[0;32mI (61079) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (61089) NimBLE: att_handle=16[0m
+
+[0;32mI (61659) OTA_HELPER: recv: 4096, recv_total:135168[0m
+
+[0;32mI (61659) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (61669) NimBLE: att_handle=16[0m
+
+[0;32mI (61829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (61869) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (62209) OTA_HELPER: recv: 4096, recv_total:139264[0m
+
+[0;32mI (62209) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (62219) NimBLE: att_handle=16[0m
+
+[0;32mI (62759) OTA_HELPER: recv: 4096, recv_total:143360[0m
+
+[0;32mI (62759) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (62769) NimBLE: att_handle=16[0m
+
+[0;32mI (62829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (62869) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (63389) OTA_HELPER: recv: 4096, recv_total:147456[0m
+
+[0;32mI (63389) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (63399) NimBLE: att_handle=16[0m
+
+[0;32mI (63829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (63869) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (63969) OTA_HELPER: recv: 4096, recv_total:151552[0m
+
+[0;32mI (63969) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (63979) NimBLE: att_handle=16[0m
+
+[0;32mI (64549) OTA_HELPER: recv: 4096, recv_total:155648[0m
+
+[0;32mI (64549) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64559) NimBLE: att_handle=16[0m
+
+[0;32mI (64829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (64869) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (65099) OTA_HELPER: recv: 4096, recv_total:159744[0m
+
+[0;32mI (65099) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (65109) NimBLE: att_handle=16[0m
+
+[0;32mI (65699) OTA_HELPER: recv: 4096, recv_total:163840[0m
+
+[0;32mI (65699) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (65709) NimBLE: att_handle=16[0m
+
+[0;32mI (65829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (65869) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (66309) OTA_HELPER: recv: 4096, recv_total:167936[0m
+
+[0;32mI (66309) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66319) NimBLE: att_handle=16[0m
+
+[0;32mI (66829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (66869) HELLO WORLD: Restarting now.[0m
+[0;32mI (66869) HELLO WORLD: Hello World![0m
+[0;32mI (66869) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (66869) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (66869) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (66879) HELLO WORLD: Minimum free heap size: 235332 bytes[0m
+
+[0;32mI (66879) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (66909) OTA_HELPER: recv: 4096, recv_total:172032[0m
+
+[0;32mI (66909) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66919) NimBLE: att_handle=16[0m
+
+[0;32mI (67439) OTA_HELPER: recv: 4096, recv_total:176128[0m
+
+[0;32mI (67439) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (67449) NimBLE: att_handle=16[0m
+
+[0;32mI (67829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (67889) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (67959) OTA_HELPER: recv: 4096, recv_total:180224[0m
+
+[0;32mI (67959) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (67969) NimBLE: att_handle=16[0m
+
+[0;32mI (68589) OTA_HELPER: recv: 4096, recv_total:184320[0m
+
+[0;32mI (68589) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (68599) NimBLE: att_handle=16[0m
+
+[0;32mI (68829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (68889) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (69219) OTA_HELPER: recv: 4096, recv_total:188416[0m
+
+[0;32mI (69219) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (69229) NimBLE: att_handle=16[0m
+
+[0;32mI (69749) OTA_HELPER: recv: 4096, recv_total:192512[0m
+
+[0;32mI (69749) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (69759) NimBLE: att_handle=16[0m
+
+[0;32mI (69829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (69889) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (70319) OTA_HELPER: recv: 4096, recv_total:196608[0m
+
+[0;32mI (70319) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (70329) NimBLE: att_handle=16[0m
+
+[0;32mI (70829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (70889) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (70899) OTA_HELPER: recv: 4096, recv_total:200704[0m
+
+[0;32mI (70899) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (70909) NimBLE: att_handle=16[0m
+
+[0;32mI (71449) OTA_HELPER: recv: 4096, recv_total:204800[0m
+
+[0;32mI (71449) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (71459) NimBLE: att_handle=16[0m
+
+[0;32mI (71829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (71889) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (71999) OTA_HELPER: recv: 4096, recv_total:208896[0m
+
+[0;32mI (71999) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (72009) NimBLE: att_handle=16[0m
+
+[0;32mI (72579) OTA_HELPER: recv: 4096, recv_total:212992[0m
+
+[0;32mI (72579) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (72589) NimBLE: att_handle=16[0m
+
+[0;32mI (72829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (72889) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (73209) OTA_HELPER: recv: 4096, recv_total:217088[0m
+
+[0;32mI (73209) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73219) NimBLE: att_handle=16[0m
+
+[0;32mI (73739) OTA_HELPER: recv: 4096, recv_total:221184[0m
+
+[0;32mI (73739) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73749) NimBLE: att_handle=16[0m
+
+[0;32mI (73829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (73889) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (74309) OTA_HELPER: recv: 4096, recv_total:225280[0m
+
+[0;32mI (74309) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (74319) NimBLE: att_handle=16[0m
+
+[0;32mI (74829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (74889) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (74889) OTA_HELPER: recv: 4096, recv_total:229376[0m
+
+[0;32mI (74889) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (74899) NimBLE: att_handle=16[0m
+
+[0;32mI (75439) OTA_HELPER: recv: 4096, recv_total:233472[0m
+
+[0;32mI (75439) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75449) NimBLE: att_handle=16[0m
+
+[0;32mI (75829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (75889) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (75989) OTA_HELPER: recv: 4096, recv_total:237568[0m
+
+[0;32mI (75989) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75999) NimBLE: att_handle=16[0m
+
+[0;32mI (76569) OTA_HELPER: recv: 4096, recv_total:241664[0m
+
+[0;32mI (76569) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (76579) NimBLE: att_handle=16[0m
+
+[0;32mI (76829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (76889) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (77199) OTA_HELPER: recv: 4096, recv_total:245760[0m
+
+[0;32mI (77199) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77209) NimBLE: att_handle=16[0m
+
+[0;32mI (77749) OTA_HELPER: recv: 4096, recv_total:249856[0m
+
+[0;32mI (77749) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77759) NimBLE: att_handle=16[0m
+
+[0;32mI (77829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (77889) HELLO WORLD: Restarting now.[0m
+[0;32mI (77889) HELLO WORLD: Hello World![0m
+[0;32mI (77889) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (77889) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (77889) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (77899) HELLO WORLD: Minimum free heap size: 235332 bytes[0m
+
+[0;32mI (77899) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (78299) OTA_HELPER: recv: 4096, recv_total:253952[0m
+
+[0;32mI (78299) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (78309) NimBLE: att_handle=16[0m
+
+[0;32mI (78829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (78829) OTA_HELPER: recv: 4096, recv_total:258048[0m
+
+[0;32mI (78829) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (78839) NimBLE: att_handle=16[0m
+
+[0;32mI (78909) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (79429) OTA_HELPER: recv: 4096, recv_total:262144[0m
+
+[0;32mI (79429) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (79439) NimBLE: att_handle=16[0m
+
+[0;32mI (79829) LED_BLINK: Turning the LED ON![0m
+[0;32mI (79909) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (80089) OTA_HELPER: recv: 4096, recv_total:266240[0m
+
+[0;32mI (80089) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (80099) NimBLE: att_handle=16[0m
+
+[0;32mI (80819) OTA_HELPER: recv: 4096, recv_total:270336[0m
+
+[0;32mI (80819) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (80829) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (80839) NimBLE: att_handle=16[0m
+
+[0;32mI (80909) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (81509) OTA_HELPER: recv: 4096, recv_total:274432[0m
+
+[0;32mI (81509) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (81519) NimBLE: att_handle=16[0m
+
+[0;32mI (81839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (81909) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (82079) OTA_HELPER: recv: 4096, recv_total:278528[0m
+
+[0;32mI (82079) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (82099) NimBLE: att_handle=16[0m
+
+[0;32mI (82659) OTA_HELPER: recv: 4096, recv_total:282624[0m
+
+[0;32mI (82659) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (82669) NimBLE: att_handle=16[0m
+
+[0;32mI (82839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (82909) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (83209) OTA_HELPER: recv: 4096, recv_total:286720[0m
+
+[0;32mI (83209) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (83219) NimBLE: att_handle=16[0m
+
+[0;32mI (83819) OTA_HELPER: recv: 4096, recv_total:290816[0m
+
+[0;32mI (83819) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (83829) NimBLE: att_handle=16[0m
+
+[0;32mI (83839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (83909) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (84339) OTA_HELPER: recv: 4096, recv_total:294912[0m
+
+[0;32mI (84339) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (84349) NimBLE: att_handle=16[0m
+
+[0;32mI (84839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (84909) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (84969) OTA_HELPER: recv: 4096, recv_total:299008[0m
+
+[0;32mI (84969) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (84979) NimBLE: att_handle=16[0m
+
+[0;32mI (85629) OTA_HELPER: recv: 4096, recv_total:303104[0m
+
+[0;32mI (85629) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (85639) NimBLE: att_handle=16[0m
+
+[0;32mI (85839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (85909) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (86149) OTA_HELPER: recv: 4096, recv_total:307200[0m
+
+[0;32mI (86149) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (86159) NimBLE: att_handle=16[0m
+
+[0;32mI (86699) OTA_HELPER: recv: 4096, recv_total:311296[0m
+
+[0;32mI (86699) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (86719) NimBLE: att_handle=16[0m
+
+[0;32mI (86839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (86909) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (87309) OTA_HELPER: recv: 4096, recv_total:315392[0m
+
+[0;32mI (87309) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (87319) NimBLE: att_handle=16[0m
+
+[0;32mI (87839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (87889) OTA_HELPER: recv: 4096, recv_total:319488[0m
+
+[0;32mI (87889) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (87899) NimBLE: att_handle=16[0m
+
+[0;32mI (87909) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (88439) OTA_HELPER: recv: 4096, recv_total:323584[0m
+
+[0;32mI (88439) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (88449) NimBLE: att_handle=16[0m
+
+[0;32mI (88839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (88909) HELLO WORLD: Restarting now.[0m
+[0;32mI (88909) HELLO WORLD: Hello World![0m
+[0;32mI (88909) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (88909) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (88909) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (88919) HELLO WORLD: Minimum free heap size: 235332 bytes[0m
+
+[0;32mI (88919) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (89089) OTA_HELPER: recv: 4096, recv_total:327680[0m
+
+[0;32mI (89089) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (89099) NimBLE: att_handle=16[0m
+
+[0;32mI (89699) OTA_HELPER: recv: 4096, recv_total:331776[0m
+
+[0;32mI (89699) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (89709) NimBLE: att_handle=16[0m
+
+[0;32mI (89839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (89929) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (90299) OTA_HELPER: recv: 4096, recv_total:335872[0m
+
+[0;32mI (90299) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (90309) NimBLE: att_handle=16[0m
+
+[0;32mI (90839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (90929) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (90959) OTA_HELPER: recv: 4096, recv_total:339968[0m
+
+[0;32mI (90959) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (90969) NimBLE: att_handle=16[0m
+
+[0;32mI (91509) OTA_HELPER: recv: 4096, recv_total:344064[0m
+
+[0;32mI (91509) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (91519) NimBLE: att_handle=16[0m
+
+[0;32mI (91839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (91929) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (92009) OTA_HELPER: recv: 4096, recv_total:348160[0m
+
+[0;32mI (92009) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (92019) NimBLE: att_handle=16[0m
+
+[0;32mI (92579) OTA_HELPER: recv: 4096, recv_total:352256[0m
+
+[0;32mI (92589) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (92599) NimBLE: att_handle=16[0m
+
+[0;32mI (92839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (92929) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (93159) OTA_HELPER: recv: 4096, recv_total:356352[0m
+
+[0;32mI (93159) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (93169) NimBLE: att_handle=16[0m
+
+[0;32mI (93789) OTA_HELPER: recv: 4096, recv_total:360448[0m
+
+[0;32mI (93789) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (93799) NimBLE: att_handle=16[0m
+
+[0;32mI (93839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (93929) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (94419) OTA_HELPER: recv: 4096, recv_total:364544[0m
+
+[0;32mI (94419) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (94429) NimBLE: att_handle=16[0m
+
+[0;32mI (94839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (94929) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (94969) OTA_HELPER: recv: 4096, recv_total:368640[0m
+
+[0;32mI (94969) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (94979) NimBLE: att_handle=16[0m
+
+[0;32mI (95529) OTA_HELPER: recv: 4096, recv_total:372736[0m
+
+[0;32mI (95529) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (95539) NimBLE: att_handle=16[0m
+
+[0;32mI (95839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (95929) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (96049) OTA_HELPER: recv: 4096, recv_total:376832[0m
+
+[0;32mI (96049) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (96059) NimBLE: att_handle=16[0m
+
+[0;32mI (96599) OTA_HELPER: recv: 4096, recv_total:380928[0m
+
+[0;32mI (96599) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (96609) NimBLE: att_handle=16[0m
+
+[0;32mI (96839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (96929) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (97259) OTA_HELPER: recv: 4096, recv_total:385024[0m
+
+[0;32mI (97259) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (97269) NimBLE: att_handle=16[0m
+
+[0;32mI (97839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (97859) OTA_HELPER: recv: 4096, recv_total:389120[0m
+
+[0;32mI (97859) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (97869) NimBLE: att_handle=16[0m
+
+[0;32mI (97929) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (98409) OTA_HELPER: recv: 4096, recv_total:393216[0m
+
+[0;32mI (98409) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (98419) NimBLE: att_handle=16[0m
+
+[0;32mI (98839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (98929) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (98939) OTA_HELPER: recv: 4096, recv_total:397312[0m
+
+[0;32mI (98939) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (98949) NimBLE: att_handle=16[0m
+
+[0;32mI (99519) OTA_HELPER: recv: 4096, recv_total:401408[0m
+
+[0;32mI (99519) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (99529) NimBLE: att_handle=16[0m
+
+[0;32mI (99839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (99929) HELLO WORLD: Restarting now.[0m
+[0;32mI (99929) HELLO WORLD: Hello World![0m
+[0;32mI (99929) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (99929) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (99929) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (99939) HELLO WORLD: Minimum free heap size: 235332 bytes[0m
+
+[0;32mI (99939) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (100089) OTA_HELPER: recv: 4096, recv_total:405504[0m
+
+[0;32mI (100089) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (100099) NimBLE: att_handle=16[0m
+
+[0;32mI (100619) OTA_HELPER: recv: 4096, recv_total:409600[0m
+
+[0;32mI (100619) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (100629) NimBLE: att_handle=16[0m
+
+[0;32mI (100839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (100949) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (101199) OTA_HELPER: recv: 4096, recv_total:413696[0m
+
+[0;32mI (101199) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (101209) NimBLE: att_handle=16[0m
+
+[0;32mI (101769) OTA_HELPER: recv: 4096, recv_total:417792[0m
+
+[0;32mI (101769) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (101779) NimBLE: att_handle=16[0m
+
+[0;32mI (101839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (101949) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (102299) OTA_HELPER: recv: 4096, recv_total:421888[0m
+
+[0;32mI (102299) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (102309) NimBLE: att_handle=16[0m
+
+[0;32mI (102839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (102949) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (103109) OTA_HELPER: recv: 4096, recv_total:425984[0m
+
+[0;32mI (103109) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (103119) NimBLE: att_handle=16[0m
+
+[0;32mI (103839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (103949) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (103999) OTA_HELPER: recv: 4096, recv_total:430080[0m
+
+[0;32mI (103999) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (104019) NimBLE: att_handle=16[0m
+
+[0;32mI (104499) OTA_HELPER: recv: 4096, recv_total:434176[0m
+
+[0;32mI (104499) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (104509) NimBLE: att_handle=16[0m
+
+[0;32mI (104839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (104949) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (105049) OTA_HELPER: recv: 4096, recv_total:438272[0m
+
+[0;32mI (105049) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (105069) NimBLE: att_handle=16[0m
+
+[0;32mI (105629) OTA_HELPER: recv: 4096, recv_total:442368[0m
+
+[0;32mI (105629) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (105639) NimBLE: att_handle=16[0m
+
+[0;32mI (105839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (105949) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (106209) OTA_HELPER: recv: 4096, recv_total:446464[0m
+
+[0;32mI (106209) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (106219) NimBLE: att_handle=16[0m
+
+[0;32mI (106729) OTA_HELPER: recv: 4096, recv_total:450560[0m
+
+[0;32mI (106729) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (106749) NimBLE: att_handle=16[0m
+
+[0;32mI (106839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (106949) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (107289) OTA_HELPER: recv: 4096, recv_total:454656[0m
+
+[0;32mI (107289) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (107299) NimBLE: att_handle=16[0m
+
+[0;32mI (107839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (107859) OTA_HELPER: recv: 4096, recv_total:458752[0m
+
+[0;32mI (107859) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (107869) NimBLE: att_handle=16[0m
+
+[0;32mI (107949) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (108409) OTA_HELPER: recv: 4096, recv_total:462848[0m
+
+[0;32mI (108409) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (108429) NimBLE: att_handle=16[0m
+
+[0;32mI (108839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (108949) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (108969) OTA_HELPER: recv: 4096, recv_total:466944[0m
+
+[0;32mI (108969) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (108979) NimBLE: att_handle=16[0m
+
+[0;32mI (109569) OTA_HELPER: recv: 4096, recv_total:471040[0m
+
+[0;32mI (109569) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (109579) NimBLE: att_handle=16[0m
+
+[0;32mI (109839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (109949) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (110169) OTA_HELPER: recv: 4096, recv_total:475136[0m
+
+[0;32mI (110169) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (110179) NimBLE: att_handle=16[0m
+
+[0;32mI (110699) OTA_HELPER: recv: 4096, recv_total:479232[0m
+
+[0;32mI (110699) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (110709) NimBLE: att_handle=16[0m
+
+[0;32mI (110839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (110949) HELLO WORLD: Restarting now.[0m
+[0;32mI (110949) HELLO WORLD: Hello World![0m
+[0;32mI (110949) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (110949) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (110949) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (110959) HELLO WORLD: Minimum free heap size: 235332 bytes[0m
+
+[0;32mI (110959) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (111329) OTA_HELPER: recv: 4096, recv_total:483328[0m
+
+[0;32mI (111329) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (111339) NimBLE: att_handle=16[0m
+
+[0;32mI (111839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (111929) OTA_HELPER: recv: 4096, recv_total:487424[0m
+
+[0;32mI (111929) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (111939) NimBLE: att_handle=16[0m
+
+[0;32mI (111969) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (112539) OTA_HELPER: recv: 4096, recv_total:491520[0m
+
+[0;32mI (112539) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (112549) NimBLE: att_handle=16[0m
+
+[0;32mI (112839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (112969) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (113169) OTA_HELPER: recv: 4096, recv_total:495616[0m
+
+[0;32mI (113169) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (113179) NimBLE: att_handle=16[0m
+
+[0;32mI (113739) OTA_HELPER: recv: 4096, recv_total:499712[0m
+
+[0;32mI (113739) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (113749) NimBLE: att_handle=16[0m
+
+[0;32mI (113839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (113969) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (114319) OTA_HELPER: recv: 4096, recv_total:503808[0m
+
+[0;32mI (114319) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (114329) NimBLE: att_handle=16[0m
+
+[0;32mI (114839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (114919) OTA_HELPER: recv: 4096, recv_total:507904[0m
+
+[0;32mI (114919) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (114939) NimBLE: att_handle=16[0m
+
+[0;32mI (114969) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (115529) OTA_HELPER: recv: 4096, recv_total:512000[0m
+
+[0;32mI (115529) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (115539) NimBLE: att_handle=16[0m
+
+[0;32mI (115839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (115969) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (116129) OTA_HELPER: recv: 4096, recv_total:516096[0m
+
+[0;32mI (116129) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (116139) NimBLE: att_handle=16[0m
+
+[0;32mI (116739) OTA_HELPER: recv: 4096, recv_total:520192[0m
+
+[0;32mI (116739) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (116749) NimBLE: att_handle=16[0m
+
+[0;32mI (116839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (116969) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (117339) OTA_HELPER: recv: 4096, recv_total:524288[0m
+
+[0;32mI (117339) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (117349) NimBLE: att_handle=16[0m
+
+[0;32mI (117839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (117969) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (117969) OTA_HELPER: recv: 4096, recv_total:528384[0m
+
+[0;32mI (117969) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (117979) NimBLE: att_handle=16[0m
+
+[0;32mI (118519) OTA_HELPER: recv: 4096, recv_total:532480[0m
+
+[0;32mI (118519) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (118529) NimBLE: att_handle=16[0m
+
+[0;32mI (118839) LED_BLINK: Turning the LED OFF![0m
+[0;32mI (118969) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (119099) OTA_HELPER: recv: 4096, recv_total:536576[0m
+
+[0;32mI (119099) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (119109) NimBLE: att_handle=16[0m
+
+[0;32mI (119699) OTA_HELPER: recv: 4096, recv_total:540672[0m
+
+[0;32mI (119699) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (119709) NimBLE: att_handle=16[0m
+
+[0;32mI (119839) LED_BLINK: Turning the LED ON![0m
+[0;32mI (119969) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (120069) OTA_HELPER: recv: 2994, recv_total:543666[0m
+
+[0;32mI (120069) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120079) NimBLE: att_handle=16[0m
+
+[0;32mI (120079) esp_image: segment 0: paddr=00020020 vaddr=3c060020 size=15d2ch ( 89388) map[0m
+[0;32mI (120089) esp_image: segment 1: paddr=00035d54 vaddr=3fc9a700 size=041d4h ( 16852) [0m
+[0;32mI (120099) esp_image: segment 2: paddr=00039f30 vaddr=40374000 size=060e8h ( 24808) [0m
+[0;32mI (120099) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=54580h (345472) map[0m
+
+CMD_CHAR -> 0 : 2, 1 : 0I (120119) NimBLE: GATT procedure initiated: notify; 
+[0;32mI (120119) NimBLE: att_handle=22[0m
+
+[0;32mI (120149) esp_image: segment 4: paddr=000945a8 vaddr=4037a0e8 size=105b8h ( 67000) [0m
+[0;32mI (120159) esp_image: segment 5: paddr=000a4b68 vaddr=600fe000 size=00020h (    32) [0m
+[0;32mI (120159) esp_image: segment 0: paddr=00020020 vaddr=3c060020 size=15d2ch ( 89388) map[0m
+[0;32mI (120169) esp_image: segment 1: paddr=00035d54 vaddr=3fc9a700 size=041d4h ( 16852) [0m
+[0;32mI (120179) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 4[0m
+[0;32mI (120179) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=8 reason=2 prevn=0 curn=0 previ=1 curi=0[0m
+
+[0;32mI (120179) esp_image: segment 2: paddr=00039f30 vaddr=40374000 size=060e8h ( 24808) [0m
+[0;32mI (120189) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 0[0m
+[0;32mI (120199) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=54580h (345472) map[0m
+[0;32mI (120199) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=16 reason=2 prevn=0 curn=0 previ=1 curi=0[0m
+
+[0;32mI (120219) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 1[0m
+[0;32mI (120219) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=19 reason=2 prevn=0 curn=0 previ=1 curi=0[0m
+
+[0;32mI (120229) NimBLE_BLE_OTA: client subscribe ble_gap_event, ota_char: 2[0m
+[0;32mI (120239) NimBLE_BLE_OTA: subscribe event; conn_handle=1 attr_handle=22 reason=2 prevn=0 curn=0 previ=1 curi=0[0m
+
+[0;32mI (120249) NimBLE_BLE_OTA: disconnect; reason=531 [0m
+[0;32mI (120249) NimBLE_BLE_OTA: handle=1 our_ota_addr_type=0 our_ota_addr=[0m
+[0;32mI (120259) esp_image: segment 4: paddr=000945a8 vaddr=4037a0e8 size=105b8h ( 67000) [0m
+[0;32mI (120259) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (120269) NimBLE_BLE_OTA:  our_id_addr_type=0 our_id_addr=[0m
+[0;32mI (120279) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (120279) esp_image: segment 5: paddr=000a4b68 vaddr=600fe000 size=00020h (    32) [0m
+[0;32mI (120279) NimBLE_BLE_OTA:  peer_ota_addr_type=1 peer_ota_addr=[0m
+[0;32mI (120299) NimBLE_BLE_OTA: 7a:e2:ac:b1:de:63[0m
+[0;32mI (120299) NimBLE_BLE_OTA:  peer_id_addr_type=1 peer_id_addr=[0m
+[0;32mI (120319) NimBLE_BLE_OTA: 7a:e2:ac:b1:de:63[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xb (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4200760f
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1598
+load:0x403c8700,len:0xd20
+load:0x403cb700,len:0x2f9c
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v6.0-dev-940-g76cec451ce 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jul  9 2025 14:02:32[0m
+[0;32mI (24) boot: Multicore bootloader[0m
+[0;32mI (26) boot: chip revision: v0.2[0m
+[0;32mI (29) boot: efuse block revision: v1.3[0m
+[0;32mI (32) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (36) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (70) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (77) boot:  3 ota_0            OTA app          00 10 00020000 007f0000[0m
+[0;32mI (83) boot:  4 ota_1            OTA app          00 11 00810000 007f0000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (125) esp_image: segment 0: paddr=00020020 vaddr=3c060020 size=15d2ch ( 89388) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=00035d54 vaddr=3fc9a700 size=041d4h ( 16852) load[0m
+[0;32mI (145) esp_image: segment 2: paddr=00039f30 vaddr=40374000 size=060e8h ( 24808) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=54580h (345472) map[0m
+[0;32mI (214) esp_image: segment 4: paddr=000945a8 vaddr=4037a0e8 size=105b8h ( 67000) load[0m
+[0;32mI (229) esp_image: segment 5: paddr=000a4b68 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (238) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (239) boot: Disabling RNG early entropy source...[0m
+[0;32mI (249) cpu_start: Multicore app[0m
+[0;32mI (258) cpu_start: Pro cpu start user code[0m
+[0;32mI (258) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (258) app_init: Application information:[0m
+[0;32mI (258) app_init: Project name:     ble_ota_hello_world[0m
+[0;32mI (263) app_init: App version:      1[0m
+[0;32mI (266) app_init: Compile time:     Jul  9 2025 14:02:16[0m
+[0;32mI (271) app_init: ELF file SHA256:  c0e43b798...[0m
+[0;32mI (276) app_init: ESP-IDF:          v6.0-dev-940-g76cec451ce[0m
+[0;32mI (281) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (285) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (289) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (293) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (299) heap_init: At 3FCA0DF8 len 00048918 (290 KiB): RAM[0m
+[0;32mI (304) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (309) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (315) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (321) spi_flash: detected chip: gd[0m
+[0;32mI (323) spi_flash: flash io: dio[0m
+[0;32mI (326) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (333) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (339) coexist: coex firmware version: 831ec70[0m
+[0;32mI (343) coexist: coexist rom version e7ae62f[0m
+[0;32mI (348) main_task: Started on CPU0[0m
+[0;32mI (358) main_task: Calling app_main()[0m
+[0;32mI (358) APP_MAIN: Initializing nvs flash[0m
+[0;32mI (368) APP_MAIN: Initializing BLE OTA and Hello World task[0m
+[0;32mI (368) BLE_INIT: BT controller compile version [4713a69][0m
+[0;32mI (368) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (378) BLE_INIT: Bluetooth MAC: 24:58:7c:de:8c:9e[0m
+[0;32mI (378) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (428) NimBLE_BLE_OTA: BLE Host Task Started[0m
+[0;32mI (428) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (428) NimBLE_BLE_OTA: Device Address: [0m
+[0;32mI (428) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (428) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (438) NimBLE: disc_mode=2[0m
+[0;32mI (438) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (448) NimBLE: [0m
+
+[0;32mI (448) HELLO WORLD: Hello World![0m
+[0;32mI (448) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (458) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (458) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (468) HELLO WORLD: Minimum free heap size: 258780 bytes[0m
+
+[0;32mI (468) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (478) APP_MAIN: System initialization complete[0m
+[0;32mI (1478) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (2478) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (3478) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (4478) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (5478) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (6478) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (7478) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (8478) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (9478) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (10478) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (11478) HELLO WORLD: Restarting now.[0m
+[0;32mI (11478) HELLO WORLD: Hello World![0m
+[0;32mI (11478) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (11478) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (11478) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (11488) HELLO WORLD: Minimum free heap size: 258780 bytes[0m
+
+[0;32mI (11488) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (12498) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (13498) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (14498) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (15498) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (16498) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (17498) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (18498) HELLO WORLD: Restarting in 3 seconds...[0m

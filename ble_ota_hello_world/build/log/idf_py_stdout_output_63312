@@ -1,0 +1,239 @@
+Command: /home/dennis0405/.espressif/python_env/idf6.0_py3.10_env/bin/python /home/dennis0405/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM1 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/dennis0405/ble_ota_hello_world/build/ble_ota_hello_world.elf /home/dennis0405/ble_ota_hello_world/build/bootloader/bootloader.elf -m '/home/dennis0405/.espressif/python_env/idf6.0_py3.10_env/bin/python' '/home/dennis0405/esp/esp-idf/tools/idf.py'
+[0;32mI (397) APP_MAIN: IESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42008ed2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1598
+load:0x403c8700,len:0xd20
+load:0x403cb700,len:0x2f9c
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v6.0-dev-940-g76cec451ce 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Jul  9 2025 14:02:32[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (26) boot: chip revision: v0.2[0m
+[0;32mI (29) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (71) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (77) boot:  3 ota_0            OTA app          00 10 00020000 007f0000[0m
+[0;32mI (84) boot:  4 ota_1            OTA app          00 11 00810000 007f0000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (94) esp_image: segment 0: paddr=00020020 vaddr=3c060020 size=15d2ch ( 89388) map[0m
+[0;32mI (117) esp_image: segment 1: paddr=00035d54 vaddr=3fc9a700 size=041d4h ( 16852) load[0m
+[0;32mI (120) esp_image: segment 2: paddr=00039f30 vaddr=40374000 size=060e8h ( 24808) load[0m
+[0;32mI (126) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=54580h (345472) map[0m
+[0;32mI (189) esp_image: segment 4: paddr=000945a8 vaddr=4037a0e8 size=105b8h ( 67000) load[0m
+[0;32mI (204) esp_image: segment 5: paddr=000a4b68 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (214) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (214) boot: Disabling RNG early entropy source...[0m
+[0;32mI (224) cpu_start: Multicore app[0m
+[0;32mI (233) cpu_start: Pro cpu start user code[0m
+[0;32mI (233) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (233) app_init: Application information:[0m
+[0;32mI (234) app_init: Project name:     ble_ota_hello_world[0m
+[0;32mI (238) app_init: App version:      1[0m
+[0;32mI (242) app_init: Compile time:     Jul  9 2025 14:02:16[0m
+[0;32mI (247) app_init: ELF file SHA256:  c0e43b798...[0m
+[0;32mI (251) app_init: ESP-IDF:          v6.0-dev-940-g76cec451ce[0m
+[0;32mI (256) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (260) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (264) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (268) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (274) heap_init: At 3FCA0DF8 len 00048918 (290 KiB): RAM[0m
+[0;32mI (279) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (285) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (290) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (296) spi_flash: detected chip: gd[0m
+[0;32mI (298) spi_flash: flash io: dio[0m
+[0;32mI (302) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (308) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (314) coexist: coex firmware version: 831ec70[0m
+[0;32mI (319) coexist: coexist rom version e7ae62f[0m
+[0;32mI (323) main_task: Started on CPU0[0m
+[0;32mI (333) main_task: Calling app_main()[0m
+[0;32mI (333) APP_MAIN: Initializing nvs flash[0m
+[0;32mI (343) APP_MAIN: Initializing BLE OTA and Hello World task[0m
+[0;32mI (343) BLE_INIT: BT controller compile version [4713a69][0m
+[0;32mI (343) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (353) BLE_INIT: Bluetooth MAC: 24:58:7c:de:8c:9e[0m
+[0;32mI (353) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (403) NimBLE_BLE_OTA: BLE Host Task Started[0m
+[0;32mI (403) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (403) NimBLE_BLE_OTA: Device Address: [0m
+[0;32mI (403) NimBLE_BLE_OTA: 24:58:7c:de:8c:9e[0m
+[0;32mI (403) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (413) NimBLE: disc_mode=2[0m
+[0;32mI (413) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (423) NimBLE: [0m
+
+[0;32mI (423) HELLO WORLD: Hello World![0m
+[0;32mI (423) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (433) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (433) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (443) HELLO WORLD: Minimum free heap size: 258780 bytes[0m
+
+[0;32mI (443) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (453) APP_MAIN: System initialization complete[0m
+[0;32mI (1453) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (2453) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (3453) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (4453) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (5453) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (6453) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (7453) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (8453) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (9453) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (10453) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (11453) HELLO WORLD: Restarting now.[0m
+[0;32mI (11453) HELLO WORLD: Hello World![0m
+[0;32mI (11453) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (11453) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (11453) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (11463) HELLO WORLD: Minimum free heap size: 258780 bytes[0m
+
+[0;32mI (11463) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (12473) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (13473) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (14473) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (15473) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (16473) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (17473) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (18473) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (19473) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (20473) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (21473) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (22473) HELLO WORLD: Restarting now.[0m
+[0;32mI (22473) HELLO WORLD: Hello World![0m
+[0;32mI (22473) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (22473) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (22473) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (22483) HELLO WORLD: Minimum free heap size: 258780 bytes[0m
+
+[0;32mI (22483) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (23493) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (24493) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (25493) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (26493) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (27493) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (28493) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (29493) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (30493) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (31493) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (32493) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (33493) HELLO WORLD: Restarting now.[0m
+[0;32mI (33493) HELLO WORLD: Hello World![0m
+[0;32mI (33493) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (33493) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (33493) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (33503) HELLO WORLD: Minimum free heap size: 258780 bytes[0m
+
+[0;32mI (33503) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (34513) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (35513) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (36513) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (37513) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (38513) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (39513) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (40513) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (41513) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (42513) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (43513) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (44513) HELLO WORLD: Restarting now.[0m
+[0;32mI (44513) HELLO WORLD: Hello World![0m
+[0;32mI (44513) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (44513) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (44513) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (44523) HELLO WORLD: Minimum free heap size: 258780 bytes[0m
+
+[0;32mI (44523) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (45533) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (46533) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (47533) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (48533) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (49533) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (50533) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (51533) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (52533) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (53533) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (54533) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (55533) HELLO WORLD: Restarting now.[0m
+[0;32mI (55533) HELLO WORLD: Hello World![0m
+[0;32mI (55533) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (55533) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (55533) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (55543) HELLO WORLD: Minimum free heap size: 258780 bytes[0m
+
+[0;32mI (55543) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (56553) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (57553) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (58553) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (59553) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (60553) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (61553) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (62553) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (63553) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (64553) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (65553) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (66553) HELLO WORLD: Restarting now.[0m
+[0;32mI (66553) HELLO WORLD: Hello World![0m
+[0;32mI (66553) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (66553) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (66553) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (66563) HELLO WORLD: Minimum free heap size: 258780 bytes[0m
+
+[0;32mI (66563) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (67573) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (68573) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (69573) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (70573) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (71573) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (72573) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (73573) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (74573) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (75573) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (76573) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (77573) HELLO WORLD: Restarting now.[0m
+[0;32mI (77573) HELLO WORLD: Hello World![0m
+[0;32mI (77573) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (77573) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (77573) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (77583) HELLO WORLD: Minimum free heap size: 258780 bytes[0m
+
+[0;32mI (77583) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (78593) HELLO WORLD: Restarting in 9 seconds...[0m
+[0;32mI (79593) HELLO WORLD: Restarting in 8 seconds...[0m
+[0;32mI (80593) HELLO WORLD: Restarting in 7 seconds...[0m
+[0;32mI (81593) HELLO WORLD: Restarting in 6 seconds...[0m
+[0;32mI (82593) HELLO WORLD: Restarting in 5 seconds...[0m
+[0;32mI (83593) HELLO WORLD: Restarting in 4 seconds...[0m
+[0;32mI (84593) HELLO WORLD: Restarting in 3 seconds...[0m
+[0;32mI (85593) HELLO WORLD: Restarting in 2 seconds...[0m
+[0;32mI (86593) HELLO WORLD: Restarting in 1 seconds...[0m
+[0;32mI (87593) HELLO WORLD: Restarting in 0 seconds...[0m
+[0;32mI (88593) HELLO WORLD: Restarting now.[0m
+[0;32mI (88593) HELLO WORLD: Hello World![0m
+[0;32mI (88593) HELLO WORLD: This is esp32s3 chip with 2 CPU core(s), WiFi/BLE, [0m
+[0;32mI (88593) HELLO WORLD: silicon revision v0.2, [0m
+[0;32mI (88593) HELLO WORLD: 16MB external flash[0m
+
+[0;32mI (88603) HELLO WORLD: Minimum free heap size: 258780 bytes[0m
+
+[0;32mI (88603) HELLO WORLD: Restarting in 10 seconds...[0m
+[0;32mI (89613) HELLO WORLD: Restarting in 9 seconds...[0m
